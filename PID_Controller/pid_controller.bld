@@ -1,0 +1,69 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc
+C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf -p
+xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd
+
+Reading NGO file "C:/Users/mist-lab/Documents/Control
+Software/PID_Control/PID_Controller/pid_controller.ngc" ...
+Loading design module "../ip_core/adc_fifo.ngc"...
+Loading design module "../ip_core/dac_fifo.ngc"...
+Loading design module "../ok_library/okTriggerIn.ngc"...
+Loading design module "../ok_library/okWireIn.ngc"...
+Loading design module "../ok_library/okWireOut.ngc"...
+Loading design module "../ok_library/okPipeOut.ngc"...
+Loading design module "../ok_library/okCoreHarness.ngc"...
+Loading design module "../ok_library/TFIFO64x8a_64x8b.ngc"...
+Loading design module "../ip_core/pipe_fifo.ngc"...
+Loading design module "../ip_core/idp_fifo.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'okHostClk', used in period specification
+   'TS_okHostClk', was traced into DCM_SP instance fp_intf/hostIf/hi_dcm. The
+   following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLK0: <TIMESPEC TS_fp_intf_hostIf_dcm_clk0 = PERIOD "fp_intf_hostIf_dcm_clk0"
+   TS_okHostClk HIGH 50%>
+
+Done...
+
+INFO:NgdBuild:1222 - Setting CLKIN_PERIOD attribute associated with DCM instance
+   fp_intf/hostIf/hi_dcm to 20.830000 ns based on the period specification
+   (<TIMESPEC "TS_okHostClk" = PERIOD "okHostClk" 20.83 ns HIGH 50%;>
+   [C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf(49)]).
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'fp_intf/hostIf/core0/core0/a0/pc0/read_strobe_flop' has unconnected output
+   pin
+WARNING:NgdBuild:443 - SFF primitive
+   'fp_intf/hostIf/core0/core0/a0/pc0/k_write_strobe_flop' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive
+   'fp_intf/hostIf/core0/core0/a0/pc0/interrupt_ack_flop' has unconnected output
+   pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   3
+
+Total memory usage is 241140 kilobytes
+
+Writing NGD file "pid_controller.ngd" ...
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   8 sec
+
+Writing NGDBUILD log file "pid_controller.bld"...

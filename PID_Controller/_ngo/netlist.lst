@@ -1,0 +1,12 @@
+C:\Users\mist-lab\Documents\Control Software\PID_Control\PID_Controller\pid_controller.ngc 1493999706
+../ip_core/adc_fifo.ngc 1480135332
+../ip_core/dac_fifo.ngc 1480135333
+../ok_library/okTriggerIn.ngc 1480135334
+../ok_library/okWireIn.ngc 1480135334
+../ok_library/okWireOut.ngc 1480135334
+../ok_library/okPipeOut.ngc 1480135334
+../ok_library/okCoreHarness.ngc 1480135334
+../ok_library/TFIFO64x8a_64x8b.ngc 1480135334
+../ip_core/pipe_fifo.ngc 1480135333
+../ip_core/idp_fifo.ngc 1480135333
+OK

@@ -1,0 +1,424 @@
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc C:/Users/mist/Documents/GitRepositories/pid-controller.gitclone/xem6010.ucf -p xc6slx45-fgg484-2 pid_controller.ngc pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.xst" -ofn "C:/Users/mist-lab/Documents/Control Software/PID_Control/PID_Controller/pid_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ok_library -sd ../ip_core -nt timestamp -uc "C:/Users/mist-lab/Documents/Control Software/PID_Control/xem6010.ucf" -p xc6slx45-fgg484-2 "pid_controller.ngc" pid_controller.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pid_controller_map.ncd pid_controller.ngd pid_controller.pcf 
+par -w -intstyle ise -ol high -mt off pid_controller_map.ncd pid_controller.ncd pid_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pid_controller.twx pid_controller.ncd -o pid_controller.twr pid_controller.pcf 
+bitgen -intstyle ise -f pid_controller.ut pid_controller.ncd 
+xst -intstyle ise -ifn "/home/bichen/Desktop/pid-controller/PID_Controller/pid_controller.xst" -ofn "/home/bichen/Desktop/pid-controller/PID_Controller/pid_controller.syr" 
+xst -intstyle ise -ifn "/home/bichen/Desktop/pid-controller/PID_Controller/pid_controller.xst" -ofn "/home/bichen/Desktop/pid-controller/PID_Controller/pid_controller.syr" 

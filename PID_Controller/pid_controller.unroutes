@@ -1,0 +1,33 @@
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri May 05 12:01:54 2017
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 21 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   fp_intf/hostIf/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM1_RAMD_O
+   fp_intf/hostIf/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM2_RAMD_O
+   pid_pipe/opt/Mram_add_chan_mem_RAMD_D1_O
+   pid_pipe/opt/Mram_mult_mem1_RAMD_D1_O
+   pid_pipe/opt/Mram_mult_mem2_RAMD_D1_O
+   pid_pipe/opt/Mram_os_mem_RAMD_D1_O
+   pid_pipe/opt/Mram_rep_rate_mult_mem1_RAMD_D1_O
+   pid_pipe/opt/Mram_rep_rate_mult_mem2_RAMD_D1_O
+   pid_pipe/opt/Mram_rs_mem1_RAMD_D1_O
+   pid_pipe/opt/Mram_rs_mem2_RAMD_D1_O
+   pid_pipe/ovr/Mram_os_mem_RAMD_D1_O
+   pid_pipe/pid/Mram_d_coef_mem1_RAMD_D1_O
+   pid_pipe/pid/Mram_d_coef_mem2_RAMD_D1_O
+   pid_pipe/pid/Mram_i_coef_mem1_RAMD_D1_O
+   pid_pipe/pid/Mram_i_coef_mem2_RAMD_D1_O
+   pid_pipe/pid/Mram_os_mem_RAMD_D1_O
+   pid_pipe/pid/Mram_p_coef_mem1_RAMD_D1_O
+   pid_pipe/pid/Mram_p_coef_mem2_RAMD_D1_O
+   pid_pipe/pid/Mram_setpoint_mem1_RAMD_D1_O
+   pid_pipe/pid/Mram_setpoint_mem2_RAMD_D1_O
+   pid_pipe/pid/Mram_setpoint_mem3_RAMD_D1_O
+
+

@@ -1,0 +1,2626 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: pid_controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pid_controller.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pid_controller"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-fgg484
+
+---- Source Options
+Top Module Name                    : pid_controller
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../ok_library" "../ip_core"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/ip_core/pipe_fifo.v" into library work
+Parsing module <pipe_fifo>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/ip_core/idp_fifo.v" into library work
+Parsing module <idp_fifo>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/pipe_tx_fifo.v" into library work
+Parsing module <pipe_tx_fifo>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/pid_filter.v" into library work
+Parsing module <pid_filter>.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/ep_map.vh" included at line 39.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/init.vh" included at line 40.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/oversample_filter.v" into library work
+Parsing module <oversample_filter>.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/ep_map.vh" included at line 40.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/init.vh" included at line 41.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/output_filter.v" into library work
+Parsing module <output_filter>.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/ep_map.vh" included at line 42.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/init.vh" included at line 43.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/ok_library/okLibrary.v" into library work
+Parsing module <okHost>.
+Parsing module <okCoreHarness>.
+Parsing module <okWireIn>.
+Parsing module <okWireOut>.
+Parsing module <okTriggerIn>.
+Parsing module <okTriggerOut>.
+Parsing module <okPipeIn>.
+Parsing module <okPipeOut>.
+Parsing module <okBTPipeIn>.
+Parsing module <okBTPipeOut>.
+Parsing module <okWireOR>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/instr_dispatch.v" into library work
+Parsing module <instr_dispatch>.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/ep_map.vh" included at line 45.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/init.vh" included at line 46.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/pid_pipeline.v" into library work
+Parsing module <pid_pipeline>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/ip_core/dac_fifo.v" into library work
+Parsing module <dac_fifo>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/ip_core/adc_fifo.v" into library work
+Parsing module <adc_fifo>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/frontpanel_interface.v" into library work
+Parsing module <frontpanel_interface>.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/ep_map.vh" included at line 59.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/dds_controller.v" into library work
+Parsing module <dds_controller>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/dac_controller.v" into library work
+Parsing module <dac_controller>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/adc_controller.v" into library work
+Parsing module <adc_controller>.
+Analyzing Verilog file "/home/bichen/Desktop/pid-controller/pid_controller.v" into library work
+Parsing module <pid_controller>.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/ep_map.vh" included at line 56.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/parameters.vh" included at line 57.
+Parsing verilog file "/home/bichen/Desktop/pid-controller/init.vh" included at line 58.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/bichen/Desktop/pid-controller/pid_controller.v" Line 156: Port full is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/bichen/Desktop/pid-controller/pid_controller.v" Line 238: Port full is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/bichen/Desktop/pid-controller/pid_controller.v" Line 329: Port freq_wr_done is not connected to this instance
+
+Elaborating module <pid_controller>.
+
+Elaborating module <frontpanel_interface(N_LOG=20,W_LCHAN=5,W_LDATA=18,W_EP=16,W_WR_ADDR=16,W_WR_CHAN=5,W_WR_DATA=49)>.
+WARNING:HDLCompiler:1016 - "/home/bichen/Desktop/pid-controller/ok_library/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/bichen/Desktop/pid-controller/ok_library/okLibrary.v" Line 68: Port BUSY is not connected to this instance
+
+Elaborating module <okHost>.
+
+Elaborating module <DCM_SP>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <FDS>.
+
+Elaborating module <FD>.
+
+Elaborating module <IOBUF>.
+
+Elaborating module <IODELAY2(IDELAY_TYPE="FIXED",IDELAY_VALUE=50,DELAY_SRC="IDATAIN")>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <OBUF>.
+
+Elaborating module <okCoreHarness>.
+
+Elaborating module <okTriggerIn>.
+
+Elaborating module <okWireIn>.
+
+Elaborating module <okWireOR(N=22)>.
+
+Elaborating module <okWireOut>.
+
+Elaborating module <pipe_tx_fifo>.
+
+Elaborating module <pipe_fifo>.
+WARNING:HDLCompiler:1499 - "/home/bichen/Desktop/pid-controller/ip_core/pipe_fifo.v" Line 39: Empty module <pipe_fifo> remains a black box.
+
+Elaborating module <okPipeOut>.
+
+Elaborating module <adc_controller(W_OUT=18,W_CHAN=3,N_CHAN=8,W_OS=3)>.
+WARNING:HDLCompiler:413 - "/home/bichen/Desktop/pid-controller/adc_controller.v" Line 123: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b1,SRTYPE="SYNC")>.
+
+Elaborating module <adc_fifo>.
+WARNING:HDLCompiler:1499 - "/home/bichen/Desktop/pid-controller/ip_core/adc_fifo.v" Line 39: Empty module <adc_fifo> remains a black box.
+
+Elaborating module <pid_pipeline(N_SRC=8,W_SRC=3,N_CHAN=20,W_CHAN=5,W_DIN=18,W_DOUT=49,W_OS=5,W_COMP=27,W_OPRNDS=16,W_WR_ADDR=16,W_WR_CHAN=5,W_WR_DATA=49)>.
+WARNING:HDLCompiler:1016 - "/home/bichen/Desktop/pid-controller/instr_dispatch.v" Line 107: Port full is not connected to this instance
+
+Elaborating module <instr_dispatch(N_SRC=8,W_SRC=3,N_CHAN=20,W_CHAN=5,W_DATA=18,W_WR_ADDR=16,W_WR_CHAN=5,W_WR_DATA=49)>.
+
+Elaborating module <idp_fifo>.
+WARNING:HDLCompiler:1499 - "/home/bichen/Desktop/pid-controller/ip_core/idp_fifo.v" Line 39: Empty module <idp_fifo> remains a black box.
+WARNING:HDLCompiler:413 - "/home/bichen/Desktop/pid-controller/instr_dispatch.v" Line 136: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <oversample_filter(W_CHAN=5,N_CHAN=20,W_DATA=18,W_SUM=27,W_OS=5,W_WR_ADDR=16,W_WR_CHAN=5,W_WR_DATA=49)>.
+WARNING:HDLCompiler:413 - "/home/bichen/Desktop/pid-controller/oversample_filter.v" Line 210: Result of 32-bit expression is truncated to fit in 27-bit target.
+
+Elaborating module <pid_filter(W_CHAN=5,N_CHAN=20,W_DIN=27,W_DOUT=27,W_PID_COEFS=16,W_OS=5,W_WR_ADDR=16,W_WR_CHAN=5,W_WR_DATA=49)>.
+
+Elaborating module <output_filter(W_CHAN=5,N_CHAN=20,W_DELTA=27,W_DOUT=49,W_MULT=16,W_RS=16,W_WR_ADDR=16,W_WR_CHAN=5,W_WR_DATA=49,W_OS=5)>.
+WARNING:HDLCompiler:872 - "/home/bichen/Desktop/pid-controller/output_filter.v" Line 234: Using initial value of add_dmtrs_p2 since it is never assigned
+
+Elaborating module <dac_fifo>.
+WARNING:HDLCompiler:1499 - "/home/bichen/Desktop/pid-controller/ip_core/dac_fifo.v" Line 39: Empty module <dac_fifo> remains a black box.
+
+Elaborating module <dac_controller>.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
+
+Elaborating module <dds_controller>.
+WARNING:HDLCompiler:634 - "/home/bichen/Desktop/pid-controller/pid_controller.v" Line 281: Net <sine_enable[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/bichen/Desktop/pid-controller/pid_controller.v" Line 282: Net <digital_enable[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/bichen/Desktop/pid-controller/pid_controller.v" Line 283: Net <enable_dv[3]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pid_controller>.
+    Related source file is "/home/bichen/Desktop/pid-controller/pid_controller.v".
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 156: Output port <full> of the instance <adc_buf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 238: Output port <full> of the instance <dac_buf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 238: Output port <empty> of the instance <dac_buf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <freq_wr_done> of the instance <dds_array[0].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <phase_wr_done> of the instance <dds_array[0].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <amp_wr_done> of the instance <dds_array[0].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <freq_wr_done> of the instance <dds_array[1].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <phase_wr_done> of the instance <dds_array[1].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <amp_wr_done> of the instance <dds_array[1].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <freq_wr_done> of the instance <dds_array[2].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <phase_wr_done> of the instance <dds_array[2].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <amp_wr_done> of the instance <dds_array[2].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <freq_wr_done> of the instance <dds_array[3].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <phase_wr_done> of the instance <dds_array[3].dds_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pid_controller.v" line 329: Output port <amp_wr_done> of the instance <dds_array[3].dds_cntrl> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'sine_enable', unconnected in block 'pid_controller', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'digital_enable', unconnected in block 'pid_controller', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'enable_dv', unconnected in block 'pid_controller', is tied to its initial value (0000).
+    Found 3-bit register for signal <adc_os>.
+    Found 8-bit register for signal <adc_shutdown>.
+    Found 1-bit 8-to-1 multiplexer for signal <adc_src[2]_adc_shutdown[7]_Mux_2_o> created at line 153.
+    Found 5-bit comparator greater for signal <pid_chan[4]_GND_1_o_LessThan_9_o> created at line 234
+    Summary:
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <pid_controller> synthesized.
+
+Synthesizing Unit <frontpanel_interface>.
+    Related source file is "/home/bichen/Desktop/pid-controller/frontpanel_interface.v".
+        N_LOG = 20
+        W_LCHAN = 5
+        W_LDATA = 18
+        W_EP = 16
+        W_WR_ADDR = 16
+        W_WR_CHAN = 5
+        W_WR_DATA = 49
+WARNING:Xst:647 - Input <adc_clk_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit register for signal <pipe_chan>.
+    Found 360-bit register for signal <n0082[359:0]>.
+    Found 1-bit tristate buffer for signal <i2c_sda> created at line 67
+    Found 1-bit tristate buffer for signal <i2c_scl> created at line 68
+    Found 5-bit comparator equal for signal <log_chan_in[4]_pipe_chan[4]_equal_30_o> created at line 197
+    Summary:
+	inferred 365 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  21 Multiplexer(s).
+	inferred   2 Tristate(s).
+Unit <frontpanel_interface> synthesized.
+
+Synthesizing Unit <okHost>.
+    Related source file is "/home/bichen/Desktop/pid-controller/ok_library/okLibrary.v".
+    Set property "IOB = TRUE" for instance <delays[0].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[0].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[0].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[1].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[1].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[1].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[2].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[2].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[2].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[3].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[3].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[3].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[4].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[4].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[4].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[5].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[5].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[5].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[6].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[6].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[6].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[7].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[7].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[7].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[8].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[8].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[8].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[9].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[9].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[9].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[10].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[10].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[10].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[11].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[11].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[11].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[12].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[12].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[12].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[13].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[13].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[13].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[14].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[14].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[14].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[15].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[15].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[15].fdreout1>.
+    Summary:
+	no macro.
+Unit <okHost> synthesized.
+
+Synthesizing Unit <okWireOR>.
+    Related source file is "/home/bichen/Desktop/pid-controller/ok_library/okLibrary.v".
+        N = 22
+    Summary:
+	no macro.
+Unit <okWireOR> synthesized.
+
+Synthesizing Unit <pipe_tx_fifo>.
+    Related source file is "/home/bichen/Desktop/pid-controller/pipe_tx_fifo.v".
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pipe_tx_fifo.v" line 75: Output port <full> of the instance <pipe_buf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/pipe_tx_fifo.v" line 75: Output port <empty> of the instance <pipe_buf> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <cur_state>.
+    Found 12-bit register for signal <rd_count>.
+    Found finite state machine <FSM_0> for signal <cur_state>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | rd_clk (rising_edge)                           |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit adder for signal <rd_count[11]_GND_19_o_add_5_OUT> created at line 62.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <pipe_tx_fifo> synthesized.
+
+Synthesizing Unit <adc_controller>.
+    Related source file is "/home/bichen/Desktop/pid-controller/adc_controller.v".
+        W_OUT = 18
+        N_CHAN = 8
+        W_CHAN = 3
+        W_OS = 3
+    Found 18-bit register for signal <data_a_tx>.
+    Found 18-bit register for signal <data_b_tx>.
+    Found 3-bit register for signal <chan_a_tx>.
+    Found 3-bit register for signal <chan_b_tx>.
+    Found 1-bit register for signal <dv_reg>.
+    Found 3-bit register for signal <chan_b_reg>.
+    Found 18-bit register for signal <data_b_reg>.
+    Found 1-bit register for signal <dv_out>.
+    Found 3-bit register for signal <chan_out>.
+    Found 18-bit register for signal <data_out>.
+    Found 3-bit register for signal <cv_cur_state>.
+    Found 8-bit register for signal <cv_counter>.
+    Found 3-bit register for signal <rd_cur_state>.
+    Found 8-bit register for signal <rd_counter>.
+    Found finite state machine <FSM_1> for signal <cv_cur_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | reset_in (positive)                            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <rd_cur_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | reset_in (positive)                            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <chan_a_tx[2]_GND_22_o_add_20_OUT> created at line 125.
+    Found 3-bit adder for signal <chan_b_tx[2]_GND_22_o_add_21_OUT> created at line 126.
+    Found 8-bit adder for signal <cv_counter[7]_GND_22_o_add_47_OUT> created at line 198.
+    Found 8-bit adder for signal <rd_counter[7]_GND_22_o_add_69_OUT> created at line 243.
+    Found 3-bit comparator equal for signal <n0041> created at line 195
+    Found 8-bit comparator greater for signal <n0049> created at line 214
+    Found 3-bit comparator equal for signal <n0063> created at line 240
+    Found 8-bit comparator greater for signal <rd_counter[7]_GND_22_o_LessThan_86_o> created at line 264
+    WARNING:Xst:2404 -  FFs/Latches <cstart_reg<0:0>> (without init value) have a constant value of 1 in block <adc_controller>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 102 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   2 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <adc_controller> synthesized.
+
+Synthesizing Unit <pid_pipeline>.
+    Related source file is "/home/bichen/Desktop/pid-controller/pid_pipeline.v".
+        N_SRC = 8
+        W_SRC = 3
+        N_CHAN = 20
+        W_CHAN = 5
+        W_DIN = 18
+        W_DOUT = 49
+        W_OS = 5
+        W_COMP = 27
+        W_OPRNDS = 16
+        W_WR_ADDR = 16
+        W_WR_CHAN = 5
+        W_WR_DATA = 49
+    Summary:
+	no macro.
+Unit <pid_pipeline> synthesized.
+
+Synthesizing Unit <instr_dispatch>.
+    Related source file is "/home/bichen/Desktop/pid-controller/instr_dispatch.v".
+        N_SRC = 8
+        W_SRC = 3
+        N_CHAN = 20
+        W_CHAN = 5
+        W_DATA = 18
+        W_WR_ADDR = 16
+        W_WR_CHAN = 5
+        W_WR_DATA = 49
+WARNING:Xst:647 - Input <wr_data<48:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/instr_dispatch.v" line 107: Output port <full> of the instance <input_buf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/bichen/Desktop/pid-controller/instr_dispatch.v" line 107: Output port <empty> of the instance <input_buf> is unconnected or connected to loadless signal.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <chan_src_sel_mem>, simulation mismatch.
+    Found 20x4-bit single-port RAM <Mram_chan_src_sel_mem> for signal <chan_src_sel_mem>.
+    Found 20-bit register for signal <instr_sent>.
+    Found 5-bit register for signal <dspch_chan>.
+    Found 18-bit register for signal <dspch_data>.
+    Found 1-bit register for signal <dspch_dv>.
+    Found 1-bit register for signal <src_chan_map_ff_0>.
+    Found 1-bit register for signal <src_chan_map_ff_1>.
+    Found 1-bit register for signal <src_chan_map_ff_2>.
+    Found 1-bit register for signal <src_chan_map_ff_3>.
+    Found 1-bit register for signal <src_chan_map_ff_4>.
+    Found 1-bit register for signal <src_chan_map_ff_5>.
+    Found 1-bit register for signal <src_chan_map_ff_6>.
+    Found 1-bit register for signal <src_chan_map_ff_7>.
+    Found 1-bit register for signal <src_chan_map_ff_8>.
+    Found 1-bit register for signal <src_chan_map_ff_9>.
+    Found 1-bit register for signal <src_chan_map_ff_10>.
+    Found 1-bit register for signal <src_chan_map_ff_11>.
+    Found 1-bit register for signal <src_chan_map_ff_12>.
+    Found 1-bit register for signal <src_chan_map_ff_13>.
+    Found 1-bit register for signal <src_chan_map_ff_14>.
+    Found 1-bit register for signal <src_chan_map_ff_15>.
+    Found 1-bit register for signal <src_chan_map_ff_16>.
+    Found 1-bit register for signal <src_chan_map_ff_17>.
+    Found 1-bit register for signal <src_chan_map_ff_18>.
+    Found 1-bit register for signal <src_chan_map_ff_19>.
+    Found 1-bit register for signal <src_chan_map_ff_20>.
+    Found 1-bit register for signal <src_chan_map_ff_21>.
+    Found 1-bit register for signal <src_chan_map_ff_22>.
+    Found 1-bit register for signal <src_chan_map_ff_23>.
+    Found 1-bit register for signal <src_chan_map_ff_24>.
+    Found 1-bit register for signal <src_chan_map_ff_25>.
+    Found 1-bit register for signal <src_chan_map_ff_26>.
+    Found 1-bit register for signal <src_chan_map_ff_27>.
+    Found 1-bit register for signal <src_chan_map_ff_28>.
+    Found 1-bit register for signal <src_chan_map_ff_29>.
+    Found 1-bit register for signal <src_chan_map_ff_30>.
+    Found 1-bit register for signal <src_chan_map_ff_31>.
+    Found 1-bit register for signal <src_chan_map_ff_32>.
+    Found 1-bit register for signal <src_chan_map_ff_33>.
+    Found 1-bit register for signal <src_chan_map_ff_34>.
+    Found 1-bit register for signal <src_chan_map_ff_35>.
+    Found 1-bit register for signal <src_chan_map_ff_36>.
+    Found 1-bit register for signal <src_chan_map_ff_37>.
+    Found 1-bit register for signal <src_chan_map_ff_38>.
+    Found 1-bit register for signal <src_chan_map_ff_39>.
+    Found 1-bit register for signal <src_chan_map_ff_40>.
+    Found 1-bit register for signal <src_chan_map_ff_41>.
+    Found 1-bit register for signal <src_chan_map_ff_42>.
+    Found 1-bit register for signal <src_chan_map_ff_43>.
+    Found 1-bit register for signal <src_chan_map_ff_44>.
+    Found 1-bit register for signal <src_chan_map_ff_45>.
+    Found 1-bit register for signal <src_chan_map_ff_46>.
+    Found 1-bit register for signal <src_chan_map_ff_47>.
+    Found 1-bit register for signal <src_chan_map_ff_48>.
+    Found 1-bit register for signal <src_chan_map_ff_49>.
+    Found 1-bit register for signal <src_chan_map_ff_50>.
+    Found 1-bit register for signal <src_chan_map_ff_51>.
+    Found 1-bit register for signal <src_chan_map_ff_52>.
+    Found 1-bit register for signal <src_chan_map_ff_53>.
+    Found 1-bit register for signal <src_chan_map_ff_54>.
+    Found 1-bit register for signal <src_chan_map_ff_55>.
+    Found 1-bit register for signal <src_chan_map_ff_56>.
+    Found 1-bit register for signal <src_chan_map_ff_57>.
+    Found 1-bit register for signal <src_chan_map_ff_58>.
+    Found 1-bit register for signal <src_chan_map_ff_59>.
+    Found 1-bit register for signal <src_chan_map_ff_60>.
+    Found 1-bit register for signal <src_chan_map_ff_61>.
+    Found 1-bit register for signal <src_chan_map_ff_62>.
+    Found 1-bit register for signal <src_chan_map_ff_63>.
+    Found 1-bit register for signal <src_chan_map_ff_64>.
+    Found 1-bit register for signal <src_chan_map_ff_65>.
+    Found 1-bit register for signal <src_chan_map_ff_66>.
+    Found 1-bit register for signal <src_chan_map_ff_67>.
+    Found 1-bit register for signal <src_chan_map_ff_68>.
+    Found 1-bit register for signal <src_chan_map_ff_69>.
+    Found 1-bit register for signal <src_chan_map_ff_70>.
+    Found 1-bit register for signal <src_chan_map_ff_71>.
+    Found 1-bit register for signal <src_chan_map_ff_72>.
+    Found 1-bit register for signal <src_chan_map_ff_73>.
+    Found 1-bit register for signal <src_chan_map_ff_74>.
+    Found 1-bit register for signal <src_chan_map_ff_75>.
+    Found 1-bit register for signal <src_chan_map_ff_76>.
+    Found 1-bit register for signal <src_chan_map_ff_77>.
+    Found 1-bit register for signal <src_chan_map_ff_78>.
+    Found 1-bit register for signal <src_chan_map_ff_79>.
+    Found 1-bit register for signal <src_chan_map_ff_80>.
+    Found 1-bit register for signal <src_chan_map_ff_81>.
+    Found 1-bit register for signal <src_chan_map_ff_82>.
+    Found 1-bit register for signal <src_chan_map_ff_83>.
+    Found 1-bit register for signal <src_chan_map_ff_84>.
+    Found 1-bit register for signal <src_chan_map_ff_85>.
+    Found 1-bit register for signal <src_chan_map_ff_86>.
+    Found 1-bit register for signal <src_chan_map_ff_87>.
+    Found 1-bit register for signal <src_chan_map_ff_88>.
+    Found 1-bit register for signal <src_chan_map_ff_89>.
+    Found 1-bit register for signal <src_chan_map_ff_90>.
+    Found 1-bit register for signal <src_chan_map_ff_91>.
+    Found 1-bit register for signal <src_chan_map_ff_92>.
+    Found 1-bit register for signal <src_chan_map_ff_93>.
+    Found 1-bit register for signal <src_chan_map_ff_94>.
+    Found 1-bit register for signal <src_chan_map_ff_95>.
+    Found 1-bit register for signal <src_chan_map_ff_96>.
+    Found 1-bit register for signal <src_chan_map_ff_97>.
+    Found 1-bit register for signal <src_chan_map_ff_98>.
+    Found 1-bit register for signal <src_chan_map_ff_99>.
+    Found 1-bit register for signal <src_chan_map_ff_100>.
+    Found 1-bit register for signal <src_chan_map_ff_101>.
+    Found 1-bit register for signal <src_chan_map_ff_102>.
+    Found 1-bit register for signal <src_chan_map_ff_103>.
+    Found 1-bit register for signal <src_chan_map_ff_104>.
+    Found 1-bit register for signal <src_chan_map_ff_105>.
+    Found 1-bit register for signal <src_chan_map_ff_106>.
+    Found 1-bit register for signal <src_chan_map_ff_107>.
+    Found 1-bit register for signal <src_chan_map_ff_108>.
+    Found 1-bit register for signal <src_chan_map_ff_109>.
+    Found 1-bit register for signal <src_chan_map_ff_110>.
+    Found 1-bit register for signal <src_chan_map_ff_111>.
+    Found 1-bit register for signal <src_chan_map_ff_112>.
+    Found 1-bit register for signal <src_chan_map_ff_113>.
+    Found 1-bit register for signal <src_chan_map_ff_114>.
+    Found 1-bit register for signal <src_chan_map_ff_115>.
+    Found 1-bit register for signal <src_chan_map_ff_116>.
+    Found 1-bit register for signal <src_chan_map_ff_117>.
+    Found 1-bit register for signal <src_chan_map_ff_118>.
+    Found 1-bit register for signal <src_chan_map_ff_119>.
+    Found 1-bit register for signal <src_chan_map_ff_120>.
+    Found 1-bit register for signal <src_chan_map_ff_121>.
+    Found 1-bit register for signal <src_chan_map_ff_122>.
+    Found 1-bit register for signal <src_chan_map_ff_123>.
+    Found 1-bit register for signal <src_chan_map_ff_124>.
+    Found 1-bit register for signal <src_chan_map_ff_125>.
+    Found 1-bit register for signal <src_chan_map_ff_126>.
+    Found 1-bit register for signal <src_chan_map_ff_127>.
+    Found 1-bit register for signal <src_chan_map_ff_128>.
+    Found 1-bit register for signal <src_chan_map_ff_129>.
+    Found 1-bit register for signal <src_chan_map_ff_130>.
+    Found 1-bit register for signal <src_chan_map_ff_131>.
+    Found 1-bit register for signal <src_chan_map_ff_132>.
+    Found 1-bit register for signal <src_chan_map_ff_133>.
+    Found 1-bit register for signal <src_chan_map_ff_134>.
+    Found 1-bit register for signal <src_chan_map_ff_135>.
+    Found 1-bit register for signal <src_chan_map_ff_136>.
+    Found 1-bit register for signal <src_chan_map_ff_137>.
+    Found 1-bit register for signal <src_chan_map_ff_138>.
+    Found 1-bit register for signal <src_chan_map_ff_139>.
+    Found 1-bit register for signal <src_chan_map_ff_140>.
+    Found 1-bit register for signal <src_chan_map_ff_141>.
+    Found 1-bit register for signal <src_chan_map_ff_142>.
+    Found 1-bit register for signal <src_chan_map_ff_143>.
+    Found 1-bit register for signal <src_chan_map_ff_144>.
+    Found 1-bit register for signal <src_chan_map_ff_145>.
+    Found 1-bit register for signal <src_chan_map_ff_146>.
+    Found 1-bit register for signal <src_chan_map_ff_147>.
+    Found 1-bit register for signal <src_chan_map_ff_148>.
+    Found 1-bit register for signal <src_chan_map_ff_149>.
+    Found 1-bit register for signal <src_chan_map_ff_150>.
+    Found 1-bit register for signal <src_chan_map_ff_151>.
+    Found 1-bit register for signal <src_chan_map_ff_152>.
+    Found 1-bit register for signal <src_chan_map_ff_153>.
+    Found 1-bit register for signal <src_chan_map_ff_154>.
+    Found 1-bit register for signal <src_chan_map_ff_155>.
+    Found 1-bit register for signal <src_chan_map_ff_156>.
+    Found 1-bit register for signal <src_chan_map_ff_157>.
+    Found 1-bit register for signal <src_chan_map_ff_158>.
+    Found 1-bit register for signal <src_chan_map_ff_159>.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_16_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_19_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_22_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_25_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_28_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_31_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_34_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_37_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_40_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_43_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_46_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_49_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_52_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_55_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_58_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_61_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_64_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_67_OUT> created at line 136.
+    Found 5-bit adder for signal <GND_26_o_GND_26_o_add_70_OUT> created at line 136.
+    Found 20-bit 8-to-1 multiplexer for signal <buf_src[2]_read_port_11_OUT> created at line 0.
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_0> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_0> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_1> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_1> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_2> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_2> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_3> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_3> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_4> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_4> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_5> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_5> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_6> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_6> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_7> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_7> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_8> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_8> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_9> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_9> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_10> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_10> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_11> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_11> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_12> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_12> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_13> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_13> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_14> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_14> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_15> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_15> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_16> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_16> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_17> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_17> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_18> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_18> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_19> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_19> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_20> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_20> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_21> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_21> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_22> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_22> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_23> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_23> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_24> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_24> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_25> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_25> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_26> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_26> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_27> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_27> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_28> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_28> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_29> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_29> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_30> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_30> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_31> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_31> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_32> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_32> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_33> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_33> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_34> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_34> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_35> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_35> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_36> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_36> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_37> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_37> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_38> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_38> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_39> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_39> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_40> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_40> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_41> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_41> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_42> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_42> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_43> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_43> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_44> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_44> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_45> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_45> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_46> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_46> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_47> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_47> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_48> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_48> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_49> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_49> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_50> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_50> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_51> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_51> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_52> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_52> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_53> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_53> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_54> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_54> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_55> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_55> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_56> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_56> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_57> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_57> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_58> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_58> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_59> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_59> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_60> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_60> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_61> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_61> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_62> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_62> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_63> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_63> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_64> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_64> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_65> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_65> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_66> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_66> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_67> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_67> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_68> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_68> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_69> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_69> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_70> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_70> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_71> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_71> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_72> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_72> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_73> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_73> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_74> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_74> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_75> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_75> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_76> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_76> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_77> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_77> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_78> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_78> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_79> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_79> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_80> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_80> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_81> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_81> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_82> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_82> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_83> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_83> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_84> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_84> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_85> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_85> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_86> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_86> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_87> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_87> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_88> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_88> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_89> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_89> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_90> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_90> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_91> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_91> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_92> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_92> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_93> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_93> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_94> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_94> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_95> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_95> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_96> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_96> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_97> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_97> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_98> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_98> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_99> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_99> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_100> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_100> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_101> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_101> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_102> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_102> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_103> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_103> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_104> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_104> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_105> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_105> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_106> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_106> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_107> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_107> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_108> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_108> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_109> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_109> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_110> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_110> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_111> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_111> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_112> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_112> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_113> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_113> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_114> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_114> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_115> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_115> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_116> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_116> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_117> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_117> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_118> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_118> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_119> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_119> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_120> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_120> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_121> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_121> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_122> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_122> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_123> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_123> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_124> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_124> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_125> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_125> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_126> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_126> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_127> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_127> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_128> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_128> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_129> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_129> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_130> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_130> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_131> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_131> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_132> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_132> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_133> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_133> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_134> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_134> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_135> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_135> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_136> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_136> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_137> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_137> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_138> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_138> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_139> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_139> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_140> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_140> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_141> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_141> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_142> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_142> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_143> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_143> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_144> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_144> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_145> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_145> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_146> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_146> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_147> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_147> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_148> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_148> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_149> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_149> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_150> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_150> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_151> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_151> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_152> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_152> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_153> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_153> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_154> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_154> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_155> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_155> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_156> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_156> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_157> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_157> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_158> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_158> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_159> created at line 87
+    Found 1-bit tristate buffer for signal <src_chan_map_trst_159> created at line 87
+    Found 5-bit comparator greater for signal <wr_chan_valid> created at line 52
+    Found 4-bit comparator greater for signal <new_src[3]_PWR_25_o_LessThan_10_o> created at line 93
+    Found 5-bit comparator lessequal for signal <n0108> created at line 169
+    Summary:
+	inferred   1 RAM(s).
+	inferred  19 Adder/Subtractor(s).
+	inferred 204 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  60 Multiplexer(s).
+	inferred 320 Tristate(s).
+Unit <instr_dispatch> synthesized.
+
+Synthesizing Unit <oversample_filter>.
+    Related source file is "/home/bichen/Desktop/pid-controller/oversample_filter.v".
+        W_CHAN = 5
+        N_CHAN = 20
+        W_DATA = 18
+        W_SUM = 27
+        W_OS = 5
+        W_WR_ADDR = 16
+        W_WR_CHAN = 5
+        W_WR_DATA = 49
+WARNING:Xst:647 - Input <wr_data<48:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <os_mem>, simulation mismatch.
+    Found 20x5-bit dual-port RAM <Mram_os_mem> for signal <os_mem>.
+    Found 20-bit register for signal <clr_rqst>.
+    Found 1-bit register for signal <dv_p1>.
+    Found 5-bit register for signal <chan_p1>.
+    Found 18-bit register for signal <din_p1>.
+    Found 27-bit register for signal <sum_p1>.
+    Found 32-bit register for signal <count_p1>.
+    Found 1-bit register for signal <dv_p2>.
+    Found 5-bit register for signal <chan_p2>.
+    Found 32-bit register for signal <count_p2>.
+    Found 27-bit register for signal <sum_p2>.
+    Found 5-bit register for signal <os_p2>.
+    Found 540-bit register for signal <n1380[539:0]>.
+    Found 640-bit register for signal <n1381[639:0]>.
+    Found 1-bit register for signal <dv_p3>.
+    Found 5-bit register for signal <chan_p3>.
+    Found 18-bit register for signal <dout_p3>.
+    Found 27-bit register for signal <dout_noshift_p3>.
+    Found 28-bit adder for signal <sum_int_p2> created at line 152.
+    Found 32-bit adder for signal <count_p1[31]_GND_28_o_add_62_OUT> created at line 169.
+    Found 27-bit shifter arithmetic right for signal <sum_div_int_p3> created at line 206
+    Found 1-bit 20-to-1 multiplexer for signal <chan_in[4]_X_28_o_Mux_47_o> created at line 113.
+    Found 27-bit 20-to-1 multiplexer for signal <chan_in[4]_X_28_o_wide_mux_49_OUT> created at line 133.
+    Found 32-bit 20-to-1 multiplexer for signal <chan_in[4]_X_28_o_wide_mux_50_OUT> created at line 134.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p1[4]_X_28_o_Mux_59_o> created at line 149.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p2[4]_X_28_o_Mux_76_o> created at line 200.
+    Found 1-bit 32-to-1 multiplexer for signal <count_sat_p3> created at line 203.
+    Found 5-bit comparator greater for signal <wr_chan[4]_PWR_27_o_LessThan_45_o> created at line 85
+    Found 28-bit comparator greater for signal <sum_int_p2[27]_GND_28_o_LessThan_64_o> created at line 172
+    Found 28-bit comparator greater for signal <PWR_27_o_sum_int_p2[27]_LessThan_65_o> created at line 174
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 1404 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred 3606 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <oversample_filter> synthesized.
+
+Synthesizing Unit <pid_filter>.
+    Related source file is "/home/bichen/Desktop/pid-controller/pid_filter.v".
+        W_CHAN = 5
+        N_CHAN = 20
+        W_DIN = 27
+        W_DOUT = 27
+        W_PID_COEFS = 16
+        W_OS = 5
+        W_WR_ADDR = 16
+        W_WR_CHAN = 5
+        W_WR_DATA = 49
+WARNING:Xst:647 - Input <wr_data<48:18>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <lock_en_mem>, simulation mismatch.
+    Found 20x1-bit dual-port RAM <Mram_lock_en_mem> for signal <lock_en_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <inv_error_mem>, simulation mismatch.
+    Found 20x1-bit dual-port RAM <Mram_inv_error_mem> for signal <inv_error_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <setpoint_mem>, simulation mismatch.
+    Found 20x18-bit dual-port RAM <Mram_setpoint_mem> for signal <setpoint_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <p_coef_mem>, simulation mismatch.
+    Found 20x16-bit dual-port RAM <Mram_p_coef_mem> for signal <p_coef_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <i_coef_mem>, simulation mismatch.
+    Found 20x16-bit dual-port RAM <Mram_i_coef_mem> for signal <i_coef_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <d_coef_mem>, simulation mismatch.
+    Found 20x16-bit dual-port RAM <Mram_d_coef_mem> for signal <d_coef_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <os_mem>, simulation mismatch.
+    Found 20x5-bit dual-port RAM <Mram_os_mem> for signal <os_mem>.
+    Found 20-bit register for signal <clr_rqst>.
+    Found 1-bit register for signal <dv_p1>.
+    Found 5-bit register for signal <chan_p1>.
+    Found 27-bit register for signal <din_p1>.
+    Found 1-bit register for signal <pid_ignore_p1>.
+    Found 1-bit register for signal <lock_en_p1>.
+    Found 1-bit register for signal <inv_error_p1>.
+    Found 27-bit register for signal <setpoint_p1>.
+    Found 16-bit register for signal <p_coef_p1>.
+    Found 16-bit register for signal <i_coef_p1>.
+    Found 16-bit register for signal <d_coef_p1>.
+    Found 5-bit register for signal <os_p1>.
+    Found 1-bit register for signal <dv_p2>.
+    Found 5-bit register for signal <chan_p2>.
+    Found 28-bit register for signal <error_p2>.
+    Found 18-bit register for signal <k1_p2>.
+    Found 18-bit register for signal <k1i_p2>.
+    Found 18-bit register for signal <k2_p2>.
+    Found 18-bit register for signal <k3_p2>.
+    Found 28-bit register for signal <error_prev1_p2>.
+    Found 28-bit register for signal <error_prev2_p2>.
+    Found 560-bit register for signal <n1978[559:0]>.
+    Found 560-bit register for signal <n1979[559:0]>.
+    Found 1-bit register for signal <dv_p3>.
+    Found 5-bit register for signal <chan_p3>.
+    Found 46-bit register for signal <ce_prod1_p3>.
+    Found 46-bit register for signal <ce_prod1i_p3>.
+    Found 46-bit register for signal <ce_prod2_p3>.
+    Found 46-bit register for signal <ce_prod3_p3>.
+    Found 1-bit register for signal <dv_p4>.
+    Found 5-bit register for signal <chan_p4>.
+    Found 48-bit register for signal <delta_p4>.
+    Found 27-bit register for signal <dout_prev_p4>.
+    Found 1-bit register for signal <dv_p5>.
+    Found 5-bit register for signal <chan_p5>.
+    Found 27-bit register for signal <dout_p5>.
+    Found 540-bit register for signal <n1977[539:0]>.
+    Found 1-bit register for signal <dv_p6>.
+    Found 5-bit register for signal <chan_p6>.
+    Found 27-bit register for signal <dout_p6>.
+    Found 28-bit subtractor for signal <error_int_p2> created at line 192.
+    Found 17-bit adder for signal <p_coef_p1[15]_d_coef_p1[15]_add_99_OUT> created at line 218.
+    Found 47-bit adder for signal <ce_prod1_p3[45]_ce_prod1i_p3[45]_add_191_OUT> created at line 313.
+    Found 48-bit adder for signal <n2189> created at line 313.
+    Found 48-bit adder for signal <ce_prod1_p3[45]_ce_prod3_p3[45]_add_193_OUT> created at line 313.
+    Found 49-bit adder for signal <dout_int_p5> created at line 334.
+    Found 18-bit adder for signal <_n5603> created at line 220.
+    Found 18-bit subtractor for signal <p_coef_p1[15]_d_coef_p1[15]_sub_102_OUT> created at line 220.
+    Found 28-bit shifter logical left for signal <setpoint_p1[26]_os_p1[4]_shift_left_94_OUT> created at line 192
+    Found 18x28-bit multiplier for signal <k1_p2[17]_error_p2[27]_MuLt_175_OUT> created at line 280.
+    Found 18x28-bit multiplier for signal <n2087> created at line 281.
+    Found 18x28-bit multiplier for signal <k2_p2[17]_error_prev1_p2[27]_MuLt_177_OUT> created at line 282.
+    Found 18x28-bit multiplier for signal <k3_p2[17]_error_prev2_p2[27]_MuLt_178_OUT> created at line 283.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_in[4]_X_29_o_Mux_70_o> created at line 137.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p1[4]_X_29_o_Mux_93_o> created at line 189.
+    Found 28-bit 20-to-1 multiplexer for signal <chan_p1[4]_X_29_o_wide_mux_106_OUT> created at line 230.
+    Found 28-bit 20-to-1 multiplexer for signal <chan_p1[4]_X_29_o_wide_mux_107_OUT> created at line 231.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p2[4]_X_29_o_Mux_124_o> created at line 245.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p3[4]_X_29_o_Mux_189_o> created at line 297.
+    Found 27-bit 20-to-1 multiplexer for signal <chan_p3[4]_X_29_o_wide_mux_194_OUT> created at line 316.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p4[4]_X_29_o_Mux_201_o> created at line 331.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p5[4]_X_29_o_Mux_212_o> created at line 369.
+    Found 5-bit comparator greater for signal <wr_chan[4]_PWR_28_o_LessThan_45_o> created at line 100
+    Found 49-bit comparator greater for signal <dout_int_p5[48]_GND_29_o_LessThan_205_o> created at line 349
+    Found 49-bit comparator greater for signal <PWR_28_o_dout_int_p5[48]_LessThan_206_o> created at line 351
+    Summary:
+	inferred   7 RAM(s).
+	inferred   4 Multiplier(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred 2295 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred 4991 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <pid_filter> synthesized.
+
+Synthesizing Unit <output_filter>.
+    Related source file is "/home/bichen/Desktop/pid-controller/output_filter.v".
+        W_CHAN = 5
+        N_CHAN = 20
+        W_DELTA = 27
+        W_DOUT = 49
+        W_MULT = 16
+        W_RS = 16
+        W_WR_ADDR = 16
+        W_WR_CHAN = 5
+        W_WR_DATA = 49
+        W_OS = 5
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <min_mem>, simulation mismatch.
+    Found 20x49-bit dual-port RAM <Mram_min_mem> for signal <min_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <max_mem>, simulation mismatch.
+    Found 20x49-bit dual-port RAM <Mram_max_mem> for signal <max_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <mult_mem>, simulation mismatch.
+    Found 20x16-bit dual-port RAM <Mram_mult_mem> for signal <mult_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <rep_rate_mult_mem>, simulation mismatch.
+    Found 20x16-bit dual-port RAM <Mram_rep_rate_mult_mem> for signal <rep_rate_mult_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <rs_mem>, simulation mismatch.
+    Found 20x16-bit dual-port RAM <Mram_rs_mem> for signal <rs_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <add_chan_mem>, simulation mismatch.
+    Found 20x6-bit dual-port RAM <Mram_add_chan_mem> for signal <add_chan_mem>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <os_mem>, simulation mismatch.
+    Found 20x5-bit dual-port RAM <Mram_os_mem> for signal <os_mem>.
+    Found 20-bit register for signal <clr_rqst>.
+    Found 20-bit register for signal <inj_rqst>.
+    Found 980-bit register for signal <n1296[979:0]>.
+    Found 1-bit register for signal <inj_p1>.
+    Found 1-bit register for signal <dv_p1>.
+    Found 5-bit register for signal <chan_p1>.
+    Found 27-bit register for signal <delta_p1>.
+    Found 16-bit register for signal <mult_p1>.
+    Found 16-bit register for signal <rep_rate_mult_p1>.
+    Found 16-bit register for signal <rs_p1>.
+    Found 6-bit register for signal <add_chan_p1>.
+    Found 5-bit register for signal <os_p1>.
+    Found 1-bit register for signal <inj_p2>.
+    Found 1-bit register for signal <dv_p2>.
+    Found 5-bit register for signal <chan_p2>.
+    Found 49-bit register for signal <dmtrs_p2>.
+    Found 1-bit register for signal <inj_p3>.
+    Found 1-bit register for signal <dv_p3>.
+    Found 5-bit register for signal <chan_p3>.
+    Found 49-bit register for signal <dsum_p3>.
+    Found 49-bit register for signal <dout_prev_p3>.
+    Found 49-bit register for signal <max_p3>.
+    Found 49-bit register for signal <min_p3>.
+    Found 1-bit register for signal <inj_p4>.
+    Found 1-bit register for signal <dv_p4>.
+    Found 5-bit register for signal <chan_p4>.
+    Found 49-bit register for signal <dout_p4>.
+    Found 49-bit register for signal <init_p4>.
+    Found 980-bit register for signal <n1297[979:0]>.
+    Found 1-bit register for signal <dv_p5>.
+    Found 5-bit register for signal <chan_p5>.
+    Found 49-bit register for signal <dout_p5>.
+    Found 50-bit subtractor for signal <add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT> created at line 419.
+    Found 49-bit subtractor for signal <chan_in[4]_add_chan_p1[4]_sub_280_OUT> created at line 420.
+    Found 16-bit adder for signal <rs_p1[15]_GND_32_o_add_184_OUT> created at line 247.
+    Found 49-bit adder for signal <dout_int_p4> created at line 338.
+    Found 27x16-bit multiplier for signal <delta_p1[26]_mult_p1[15]_MuLt_183_OUT> created at line 247.
+    Found 49-bit shifter arithmetic right for signal <delta_p1[26]_rs_p1[15]_shift_right_185_OUT> created at line 247
+    Found 50x16-bit multiplier for signal <n1419> created at line 419.
+    Found 65-bit shifter arithmetic right for signal <n1420> created at line 419
+    Found 1-bit 20-to-1 multiplexer for signal <chan_in[4]_X_30_o_Mux_136_o> created at line 162.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p1[4]_X_30_o_Mux_181_o> created at line 226.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p2[4]_X_30_o_Mux_190_o> created at line 275.
+    Found 49-bit 20-to-1 multiplexer for signal <chan_p2[4]_X_30_o_wide_mux_216_OUT> created at line 313.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p3[4]_X_30_o_Mux_229_o> created at line 335.
+    Found 49-bit 20-to-1 multiplexer for signal <chan_p3[4]_X_30_o_wide_mux_236_OUT> created at line 365.
+    Found 1-bit 20-to-1 multiplexer for signal <chan_p4[4]_X_30_o_Mux_243_o> created at line 381.
+    Found 49-bit 20-to-1 multiplexer for signal <add_chan_p1[4]_X_30_o_wide_mux_273_OUT> created at line 419.
+    Found 49-bit 20-to-1 multiplexer for signal <add_chan_p1[4]_X_30_o_wide_mux_274_OUT> created at line 419.
+    Found 49-bit 20-to-1 multiplexer for signal <chan_in[4]_X_30_o_wide_mux_278_OUT> created at line 420.
+    Found 5-bit comparator greater for signal <wr_chan[4]_PWR_33_o_LessThan_89_o> created at line 119
+    Found 49-bit comparator greater for signal <dout_int_p4[48]_max_p3[48]_LessThan_233_o> created at line 356
+    Found 49-bit comparator greater for signal <min_p3[48]_dout_int_p4[48]_LessThan_234_o> created at line 358
+    Found 6-bit comparator greater for signal <add_chan_p1[5]_GND_32_o_LessThan_273_o> created at line 417
+    Summary:
+	inferred   7 RAM(s).
+	inferred   2 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 2512 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred 2994 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <output_filter> synthesized.
+
+Synthesizing Unit <dac_controller>.
+    Related source file is "/home/bichen/Desktop/pid-controller/dac_controller.v".
+    Found 4-bit register for signal <chan>.
+    Found 32-bit register for signal <tx_data>.
+    Found 3-bit register for signal <cur_state>.
+    Found 8-bit register for signal <counter>.
+    Found 16-bit register for signal <data>.
+    Found finite state machine <FSM_3> for signal <cur_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | rst_in (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <counter[7]_GND_38_o_add_36_OUT> created at line 164.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0090> created at line 107.
+    Found 3-bit comparator not equal for signal <n0033> created at line 161
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  60 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <dac_controller> synthesized.
+
+Synthesizing Unit <dds_controller>.
+    Related source file is "/home/bichen/Desktop/pid-controller/dds_controller.v".
+WARNING:Xst:647 - Input <sine_enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <digital_enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <phase_dv>.
+    Found 1-bit register for signal <amp_dv>.
+    Found 1-bit register for signal <enable_dv>.
+    Found 48-bit register for signal <freq>.
+    Found 14-bit register for signal <phase>.
+    Found 10-bit register for signal <amp>.
+    Found 64-bit register for signal <tx_data>.
+    Found 7-bit register for signal <tx_len>.
+    Found 2-bit register for signal <tx_type>.
+    Found 3-bit register for signal <cur_state>.
+    Found 32-bit register for signal <counter>.
+    Found 1-bit register for signal <freq_dv>.
+    Found finite state machine <FSM_4> for signal <cur_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | reset_in (positive)                            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit subtractor for signal <GND_40_o_GND_40_o_sub_85_OUT> created at line 252.
+    Found 32-bit adder for signal <counter[31]_GND_40_o_add_79_OUT> created at line 238.
+    Found 3-bit comparator equal for signal <n0094> created at line 235
+    Found 32-bit comparator equal for signal <counter[31]_GND_40_o_equal_86_o> created at line 252
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 181 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  33 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <dds_controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 20x1-bit dual-port RAM                                : 2
+ 20x16-bit dual-port RAM                               : 6
+ 20x18-bit dual-port RAM                               : 1
+ 20x4-bit single-port RAM                              : 1
+ 20x49-bit dual-port RAM                               : 2
+ 20x5-bit dual-port RAM                                : 3
+ 20x6-bit dual-port RAM                                : 1
+# Multipliers                                          : 6
+ 27x16-bit multiplier                                  : 1
+ 28x18-bit multiplier                                  : 4
+ 50x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 47
+ 12-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+ 28-bit adder                                          : 1
+ 28-bit subtractor                                     : 1
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 5
+ 47-bit adder                                          : 1
+ 48-bit adder                                          : 2
+ 49-bit adder                                          : 2
+ 49-bit subtractor                                     : 1
+ 5-bit adder                                           : 19
+ 50-bit subtractor                                     : 1
+ 8-bit adder                                           : 3
+ 8-bit subtractor                                      : 4
+# Registers                                            : 318
+ 1-bit register                                        : 200
+ 10-bit register                                       : 4
+ 12-bit register                                       : 1
+ 14-bit register                                       : 4
+ 16-bit register                                       : 7
+ 18-bit register                                       : 11
+ 2-bit register                                        : 4
+ 20-bit register                                       : 5
+ 27-bit register                                       : 9
+ 28-bit register                                       : 3
+ 3-bit register                                        : 5
+ 32-bit register                                       : 7
+ 360-bit register                                      : 1
+ 4-bit register                                        : 1
+ 46-bit register                                       : 4
+ 48-bit register                                       : 5
+ 49-bit register                                       : 8
+ 5-bit register                                        : 19
+ 540-bit register                                      : 2
+ 560-bit register                                      : 2
+ 6-bit register                                        : 1
+ 64-bit register                                       : 4
+ 640-bit register                                      : 1
+ 7-bit register                                        : 4
+ 8-bit register                                        : 4
+ 980-bit register                                      : 2
+# Comparators                                          : 28
+ 28-bit comparator greater                             : 2
+ 3-bit comparator equal                                : 6
+ 3-bit comparator not equal                            : 1
+ 32-bit comparator equal                               : 4
+ 4-bit comparator greater                              : 1
+ 49-bit comparator greater                             : 4
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 5
+ 5-bit comparator lessequal                            : 1
+ 6-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 11824
+ 1-bit 2-to-1 multiplexer                              : 11608
+ 1-bit 20-to-1 multiplexer                             : 14
+ 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 18-bit 2-to-1 multiplexer                             : 21
+ 2-bit 2-to-1 multiplexer                              : 20
+ 20-bit 8-to-1 multiplexer                             : 1
+ 27-bit 2-to-1 multiplexer                             : 2
+ 27-bit 20-to-1 multiplexer                            : 2
+ 28-bit 2-to-1 multiplexer                             : 1
+ 28-bit 20-to-1 multiplexer                            : 2
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 20
+ 32-bit 20-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 49-bit 2-to-1 multiplexer                             : 25
+ 49-bit 20-to-1 multiplexer                            : 5
+ 5-bit 2-to-1 multiplexer                              : 37
+ 6-bit 2-to-1 multiplexer                              : 19
+ 64-bit 2-to-1 multiplexer                             : 20
+ 65-bit 2-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 20
+ 8-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 4
+ 27-bit shifter arithmetic right                       : 1
+ 28-bit shifter logical left                           : 1
+ 49-bit shifter arithmetic right                       : 1
+ 65-bit shifter arithmetic right                       : 1
+# Tristates                                            : 322
+ 1-bit tristate buffer                                 : 322
+# FSMs                                                 : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../ip_core/adc_fifo.ngc>.
+Reading core <../ip_core/dac_fifo.ngc>.
+Reading core <../ok_library/okTriggerIn.ngc>.
+Reading core <../ok_library/okWireIn.ngc>.
+Reading core <../ok_library/okWireOut.ngc>.
+Reading core <../ok_library/okPipeOut.ngc>.
+Reading core <../ok_library/okCoreHarness.ngc>.
+Reading core <../ok_library/TFIFO64x8a_64x8b.ngc>.
+Reading core <../ip_core/pipe_fifo.ngc>.
+Reading core <../ip_core/idp_fifo.ngc>.
+Loading core <adc_fifo> for timing and area information for instance <adc_buf>.
+Loading core <dac_fifo> for timing and area information for instance <dac_buf>.
+Loading core <okTriggerIn> for timing and area information for instance <sys_gp_oti>.
+Loading core <okWireIn> for timing and area information for instance <addr_owi>.
+Loading core <okWireIn> for timing and area information for instance <chan_owi>.
+Loading core <okWireIn> for timing and area information for instance <data3_owi>.
+Loading core <okWireIn> for timing and area information for instance <data2_owi>.
+Loading core <okWireIn> for timing and area information for instance <data1_owi>.
+Loading core <okWireIn> for timing and area information for instance <data0_owi>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[0].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[1].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[2].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[3].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[4].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[5].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[6].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[7].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[8].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[9].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[10].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[11].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[12].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[13].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[14].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[15].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[16].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[17].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[18].log_owo>.
+Loading core <okWireOut> for timing and area information for instance <log_owo_arr[19].log_owo>.
+Loading core <okPipeOut> for timing and area information for instance <log_pipe>.
+Loading core <okWireOut> for timing and area information for instance <log_owo>.
+Loading core <TFIFO64x8a_64x8b> for timing and area information for instance <core0/a0/cb0>.
+Loading core <okCoreHarness> for timing and area information for instance <core0>.
+Loading core <pipe_fifo> for timing and area information for instance <pipe_buf>.
+Loading core <idp_fifo> for timing and area information for instance <input_buf>.
+INFO:Xst:2261 - The FF/Latch <k3_p2_15> in Unit <pid> is equivalent to the following 2 FFs/Latches, which will be removed : <k3_p2_16> <k3_p2_17> 
+INFO:Xst:2261 - The FF/Latch <k1i_p2_15> in Unit <pid> is equivalent to the following 2 FFs/Latches, which will be removed : <k1i_p2_16> <k1i_p2_17> 
+INFO:Xst:2261 - The FF/Latch <setpoint_p1_17> in Unit <pid> is equivalent to the following 9 FFs/Latches, which will be removed : <setpoint_p1_18> <setpoint_p1_19> <setpoint_p1_20> <setpoint_p1_21> <setpoint_p1_22> <setpoint_p1_23> <setpoint_p1_24> <setpoint_p1_25> <setpoint_p1_26> 
+INFO:Xst:2261 - The FF/Latch <k1_p2_16> in Unit <pid> is equivalent to the following FF/Latch, which will be removed : <k1_p2_17> 
+INFO:Xst:2261 - The FF/Latch <ce_prod1i_p3_35> in Unit <pid> is equivalent to the following 10 FFs/Latches, which will be removed : <ce_prod1i_p3_36> <ce_prod1i_p3_37> <ce_prod1i_p3_38> <ce_prod1i_p3_39> <ce_prod1i_p3_40> <ce_prod1i_p3_41> <ce_prod1i_p3_42> <ce_prod1i_p3_43> <ce_prod1i_p3_44> <ce_prod1i_p3_45> 
+WARNING:Xst:1293 - FF/Latch <pid_ignore_p1> has a constant value of 0 in block <pid>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <chan_3> has a constant value of 0 in block <dac_cntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <dout_p5_48> of sequential type is unconnected in block <opt>.
+
+Synthesizing (advanced) Unit <adc_controller>.
+The following registers are absorbed into counter <cv_counter>: 1 register on signal <cv_counter>.
+The following registers are absorbed into counter <rd_counter>: 1 register on signal <rd_counter>.
+The following registers are absorbed into counter <chan_a_tx>: 1 register on signal <chan_a_tx>.
+The following registers are absorbed into counter <chan_b_tx>: 1 register on signal <chan_b_tx>.
+Unit <adc_controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dac_controller>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <dac_controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dds_controller>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <dds_controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <instr_dispatch>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_chan_src_sel_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 4-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_26_o_equal_8_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data>       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <instr_dispatch> synthesized (advanced).
+
+Synthesizing (advanced) Unit <output_filter>.
+INFO:Xst:3226 - The RAM <Mram_min_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <min_p3>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 49-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_32_o_equal_118_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 49-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk_in>        | rise     |
+    |     enB            | connected to signal <flush_p3>      | low      |
+    |     addrB          | connected to signal <chan_p2>       |          |
+    |     doB            | connected to signal <min_p3>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_max_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <max_p3>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 49-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_32_o_equal_119_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 49-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk_in>        | rise     |
+    |     enB            | connected to signal <flush_p3>      | low      |
+    |     addrB          | connected to signal <chan_p2>       |          |
+    |     doB            | connected to signal <max_p3>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_rep_rate_mult_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_32_o_equal_122_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<15:0>> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_mult_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_32_o_equal_121_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<15:0>> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_rs_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_32_o_equal_123_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<15:0>> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_os_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 5-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_32_o_equal_125_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<4:0>>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 5-bit                     |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_add_chan_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 6-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_32_o_equal_124_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<5:0>>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 6-bit                     |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <output_filter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <oversample_filter>.
+INFO:Xst:3231 - The small RAM <Mram_os_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 5-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_28_o_equal_47_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 5-bit                     |          |
+    |     addrB          | connected to signal <chan_p1>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <oversample_filter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pid_filter>.
+	The following adders/subtractors are grouped into adder tree <Madd_ce_prod1_p3[45]_ce_prod3_p3[45]_add_193_OUT1> :
+ 	<Madd_ce_prod1_p3[45]_ce_prod1i_p3[45]_add_191_OUT> in block <pid_filter>, 	<Madd_n2189> in block <pid_filter>, 	<Madd_ce_prod1_p3[45]_ce_prod3_p3[45]_add_193_OUT> in block <pid_filter>.
+	Found pipelined multiplier on signal <k3_p2[17]_error_prev2_p2[27]_MuLt_178_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <k2_p2[17]_error_prev1_p2[27]_MuLt_177_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <k1_p2[17]_error_p2[27]_MuLt_175_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:3231 - The small RAM <Mram_inv_error_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 1-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_29_o_equal_56_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<0>>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 1-bit                     |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_lock_en_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 1-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_29_o_equal_55_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<0>>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 1-bit                     |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_setpoint_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 18-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_29_o_equal_57_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 18-bit                    |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_p_coef_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_29_o_equal_58_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<15:0>> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_i_coef_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_29_o_equal_59_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<15:0>> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_os_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 5-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_29_o_equal_61_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<4:0>>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 5-bit                     |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_d_coef_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wr_addr[15]_GND_29_o_equal_60_o_0> | high     |
+    |     addrA          | connected to signal <wr_chan>       |          |
+    |     diA            | connected to signal <wr_data<15:0>> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 20-word x 16-bit                    |          |
+    |     addrB          | connected to signal <chan_in>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_k3_p2[17]_error_prev2_p2[27]_MuLt_178_OUT by adding 3 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_k2_p2[17]_error_prev1_p2[27]_MuLt_177_OUT by adding 3 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_k1_p2[17]_error_p2[27]_MuLt_175_OUT by adding 3 register level(s).
+Unit <pid_filter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pipe_tx_fifo>.
+The following registers are absorbed into counter <rd_count>: 1 register on signal <rd_count>.
+Unit <pipe_tx_fifo> synthesized (advanced).
+WARNING:Xst:2677 - Node <data_log_reg_19_0> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_1> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_18> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_19> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_36> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_37> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_54> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_55> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_72> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_73> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_90> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_91> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_108> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_109> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_126> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_127> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_144> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_145> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_162> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_163> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_180> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_181> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_198> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_199> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_216> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_217> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_234> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_235> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_252> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_253> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_270> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_271> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_288> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_289> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_306> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_307> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_324> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_325> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_342> of sequential type is unconnected in block <frontpanel_interface>.
+WARNING:Xst:2677 - Node <data_log_reg_19_343> of sequential type is unconnected in block <frontpanel_interface>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 20x1-bit dual-port distributed RAM                    : 2
+ 20x16-bit dual-port distributed RAM                   : 6
+ 20x18-bit dual-port distributed RAM                   : 1
+ 20x4-bit single-port distributed RAM                  : 1
+ 20x49-bit dual-port block RAM                         : 2
+ 20x5-bit dual-port distributed RAM                    : 3
+ 20x6-bit dual-port distributed RAM                    : 1
+# Multipliers                                          : 6
+ 27x16-bit multiplier                                  : 1
+ 28x18-bit multiplier                                  : 1
+ 28x18-bit registered multiplier                       : 3
+ 50x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 37
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+ 28-bit adder                                          : 1
+ 28-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 48-bit adder                                          : 3
+ 49-bit adder                                          : 2
+ 49-bit subtractor                                     : 1
+ 5-bit adder                                           : 19
+ 50-bit subtractor                                     : 1
+ 8-bit subtractor                                      : 4
+# Counters                                             : 10
+ 12-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+ 32-bit up counter                                     : 4
+ 8-bit up counter                                      : 3
+# Registers                                            : 7295
+ Flip-Flops                                            : 7295
+# Comparators                                          : 28
+ 28-bit comparator greater                             : 2
+ 3-bit comparator equal                                : 6
+ 3-bit comparator not equal                            : 1
+ 32-bit comparator equal                               : 4
+ 4-bit comparator greater                              : 1
+ 49-bit comparator greater                             : 4
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 5
+ 5-bit comparator lessequal                            : 1
+ 6-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 12139
+ 1-bit 2-to-1 multiplexer                              : 11945
+ 1-bit 20-to-1 multiplexer                             : 14
+ 1-bit 32-to-1 multiplexer                             : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 20
+ 20-bit 8-to-1 multiplexer                             : 1
+ 27-bit 2-to-1 multiplexer                             : 2
+ 27-bit 20-to-1 multiplexer                            : 2
+ 28-bit 2-to-1 multiplexer                             : 1
+ 28-bit 20-to-1 multiplexer                            : 2
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 20
+ 32-bit 20-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 49-bit 2-to-1 multiplexer                             : 25
+ 49-bit 20-to-1 multiplexer                            : 5
+ 5-bit 2-to-1 multiplexer                              : 37
+ 6-bit 2-to-1 multiplexer                              : 19
+ 64-bit 2-to-1 multiplexer                             : 20
+ 65-bit 2-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 20
+# Logic shifters                                       : 4
+ 27-bit shifter arithmetic right                       : 1
+ 28-bit shifter logical left                           : 1
+ 49-bit shifter arithmetic right                       : 1
+ 65-bit shifter arithmetic right                       : 1
+# FSMs                                                 : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <pid_ignore_p1> has a constant value of 0 in block <pid_filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <chan_3> has a constant value of 0 in block <dac_controller>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <k3_p2_15> in Unit <pid_filter> is equivalent to the following 2 FFs/Latches, which will be removed : <k3_p2_16> <k3_p2_17> 
+INFO:Xst:2261 - The FF/Latch <setpoint_p1_17> in Unit <pid_filter> is equivalent to the following 9 FFs/Latches, which will be removed : <setpoint_p1_18> <setpoint_p1_19> <setpoint_p1_20> <setpoint_p1_21> <setpoint_p1_22> <setpoint_p1_23> <setpoint_p1_24> <setpoint_p1_25> <setpoint_p1_26> 
+INFO:Xst:2261 - The FF/Latch <k1_p2_16> in Unit <pid_filter> is equivalent to the following FF/Latch, which will be removed : <k1_p2_17> 
+INFO:Xst:2261 - The FF/Latch <ce_prod1i_p3_35> in Unit <pid_filter> is equivalent to the following 10 FFs/Latches, which will be removed : <ce_prod1i_p3_36> <ce_prod1i_p3_37> <ce_prod1i_p3_38> <ce_prod1i_p3_39> <ce_prod1i_p3_40> <ce_prod1i_p3_41> <ce_prod1i_p3_42> <ce_prod1i_p3_43> <ce_prod1i_p3_44> <ce_prod1i_p3_45> 
+INFO:Xst:2261 - The FF/Latch <k1i_p2_15> in Unit <pid_filter> is equivalent to the following 2 FFs/Latches, which will be removed : <k1i_p2_16> <k1i_p2_17> 
+WARNING:Xst:2677 - Node <dds_array[3].dds_cntrl/tx_type_1> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <dds_array[3].dds_cntrl/tx_type_0> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <dds_array[2].dds_cntrl/tx_type_1> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <dds_array[2].dds_cntrl/tx_type_0> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <dds_array[1].dds_cntrl/tx_type_1> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <dds_array[1].dds_cntrl/tx_type_0> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <dds_array[0].dds_cntrl/tx_type_1> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <dds_array[0].dds_cntrl/tx_type_0> of sequential type is unconnected in block <pid_controller>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_4> on signal <cur_state[1:2]> with sequential encoding.
+Optimizing FSM <FSM_4> on signal <cur_state[1:2]> with sequential encoding.
+Optimizing FSM <FSM_4> on signal <cur_state[1:2]> with sequential encoding.
+Optimizing FSM <FSM_4> on signal <cur_state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+ 011   | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <fp_intf/log_pipe_buf/FSM_0> on signal <cur_state[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 0
+ 001   | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <adc_cntrl/FSM_2> on signal <rd_cur_state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <adc_cntrl/FSM_1> on signal <cv_cur_state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <dac_cntrl/FSM_3> on signal <cur_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 010   | 010
+ 001   | 001
+ 011   | 011
+ 100   | 100
+-------------------
+WARNING:Xst:2677 - Node <Mram_chan_src_sel_mem4> of sequential type is unconnected in block <instr_dispatch>.
+WARNING:Xst:1293 - FF/Latch <tx_data_0> has a constant value of 0 in block <dac_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_1> has a constant value of 0 in block <dac_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_2> has a constant value of 0 in block <dac_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_3> has a constant value of 0 in block <dac_controller>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ce_prod1i_p3_33> in Unit <pid_filter> is equivalent to the following 2 FFs/Latches, which will be removed : <ce_prod1i_p3_34> <ce_prod1i_p3_35> 
+INFO:Xst:2261 - The FF/Latch <dmtrs_p2_42> in Unit <output_filter> is equivalent to the following 5 FFs/Latches, which will be removed : <dmtrs_p2_43> <dmtrs_p2_44> <dmtrs_p2_45> <dmtrs_p2_46> <dmtrs_p2_47> 
+INFO:Xst:2261 - The FF/Latch <dsum_p3_42> in Unit <output_filter> is equivalent to the following 5 FFs/Latches, which will be removed : <dsum_p3_43> <dsum_p3_44> <dsum_p3_45> <dsum_p3_46> <dsum_p3_47> 
+WARNING:Xst:2040 - Unit instr_dispatch: 160 multi-source signals are replaced by logic (pull-up yes): src_chan_map_trst_0, src_chan_map_trst_1, src_chan_map_trst_10, src_chan_map_trst_100, src_chan_map_trst_101, src_chan_map_trst_102, src_chan_map_trst_103, src_chan_map_trst_104, src_chan_map_trst_105, src_chan_map_trst_106, src_chan_map_trst_107, src_chan_map_trst_108, src_chan_map_trst_109, src_chan_map_trst_11, src_chan_map_trst_110, src_chan_map_trst_111, src_chan_map_trst_112, src_chan_map_trst_113, src_chan_map_trst_114, src_chan_map_trst_115, src_chan_map_trst_116, src_chan_map_trst_117, src_chan_map_trst_118, src_chan_map_trst_119, src_chan_map_trst_12, src_chan_map_trst_120, src_chan_map_trst_121, src_chan_map_trst_122, src_chan_map_trst_123, src_chan_map_trst_124, src_chan_map_trst_125, src_chan_map_trst_126, src_chan_map_trst_127, src_chan_map_trst_128, src_chan_map_trst_129, src_chan_map_trst_13, src_chan_map_trst_130, src_chan_map_trst_131, src_chan_map_trst_132, src_chan_map_trst_133, src_chan_map_trst_134, src_chan_map_trst_135, src_chan_map_trst_136, src_chan_map_trst_137, src_chan_map_trst_138, src_chan_map_trst_139, src_chan_map_trst_14, src_chan_map_trst_140, src_chan_map_trst_141, src_chan_map_trst_142, src_chan_map_trst_143, src_chan_map_trst_144, src_chan_map_trst_145, src_chan_map_trst_146, src_chan_map_trst_147, src_chan_map_trst_148, src_chan_map_trst_149, src_chan_map_trst_15, src_chan_map_trst_150, src_chan_map_trst_151, src_chan_map_trst_152, src_chan_map_trst_153, src_chan_map_trst_154, src_chan_map_trst_155, src_chan_map_trst_156, src_chan_map_trst_157, src_chan_map_trst_158, src_chan_map_trst_159, src_chan_map_trst_16, src_chan_map_trst_17, src_chan_map_trst_18, src_chan_map_trst_19, src_chan_map_trst_2, src_chan_map_trst_20, src_chan_map_trst_21, src_chan_map_trst_22, src_chan_map_trst_23, src_chan_map_trst_24, src_chan_map_trst_25, src_chan_map_trst_26, src_chan_map_trst_27, src_chan_map_trst_28, src_chan_map_trst_29, src_chan_map_trst_3, src_chan_map_trst_30, src_chan_map_trst_31, src_chan_map_trst_32, src_chan_map_trst_33, src_chan_map_trst_34, src_chan_map_trst_35, src_chan_map_trst_36, src_chan_map_trst_37, src_chan_map_trst_38, src_chan_map_trst_39, src_chan_map_trst_4, src_chan_map_trst_40, src_chan_map_trst_41, src_chan_map_trst_42, src_chan_map_trst_43, src_chan_map_trst_44, src_chan_map_trst_45, src_chan_map_trst_46, src_chan_map_trst_47, src_chan_map_trst_48, src_chan_map_trst_49, src_chan_map_trst_5, src_chan_map_trst_50, src_chan_map_trst_51, src_chan_map_trst_52, src_chan_map_trst_53, src_chan_map_trst_54, src_chan_map_trst_55, src_chan_map_trst_56, src_chan_map_trst_57, src_chan_map_trst_58, src_chan_map_trst_59, src_chan_map_trst_6, src_chan_map_trst_60, src_chan_map_trst_61, src_chan_map_trst_62, src_chan_map_trst_63, src_chan_map_trst_64, src_chan_map_trst_65, src_chan_map_trst_66, src_chan_map_trst_67, src_chan_map_trst_68, src_chan_map_trst_69, src_chan_map_trst_7, src_chan_map_trst_70, src_chan_map_trst_71, src_chan_map_trst_72, src_chan_map_trst_73, src_chan_map_trst_74, src_chan_map_trst_75, src_chan_map_trst_76, src_chan_map_trst_77, src_chan_map_trst_78, src_chan_map_trst_79, src_chan_map_trst_8, src_chan_map_trst_80, src_chan_map_trst_81, src_chan_map_trst_82, src_chan_map_trst_83, src_chan_map_trst_84, src_chan_map_trst_85, src_chan_map_trst_86, src_chan_map_trst_87, src_chan_map_trst_88, src_chan_map_trst_89, src_chan_map_trst_9, src_chan_map_trst_90, src_chan_map_trst_91, src_chan_map_trst_92, src_chan_map_trst_93, src_chan_map_trst_94, src_chan_map_trst_95, src_chan_map_trst_96, src_chan_map_trst_97, src_chan_map_trst_98, src_chan_map_trst_99.
+
+Optimizing unit <pid_controller> ...
+WARNING:Xst:1293 - FF/Latch <dds_array[3].dds_cntrl/tx_len_2> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[3].dds_cntrl/tx_len_1> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[3].dds_cntrl/tx_len_0> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[2].dds_cntrl/tx_len_2> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[2].dds_cntrl/tx_len_1> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[2].dds_cntrl/tx_len_0> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[1].dds_cntrl/tx_len_2> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[1].dds_cntrl/tx_len_1> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[1].dds_cntrl/tx_len_0> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[0].dds_cntrl/tx_len_2> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[0].dds_cntrl/tx_len_1> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dds_array[0].dds_cntrl/tx_len_0> has a constant value of 0 in block <pid_controller>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <okHost> ...
+
+Optimizing unit <pipe_tx_fifo> ...
+
+Optimizing unit <adc_controller> ...
+
+Optimizing unit <instr_dispatch> ...
+
+Optimizing unit <oversample_filter> ...
+
+Optimizing unit <pid_filter> ...
+
+Optimizing unit <output_filter> ...
+INFO:Xst:2261 - The FF/Latch <dmtrs_p2_42> in Unit <output_filter> is equivalent to the following FF/Latch, which will be removed : <dmtrs_p2_48> 
+INFO:Xst:2261 - The FF/Latch <dsum_p3_42> in Unit <output_filter> is equivalent to the following FF/Latch, which will be removed : <dsum_p3_48> 
+
+Optimizing unit <dac_controller> ...
+WARNING:Xst:2677 - Node <pid_pipe/ovr/dout_p3_1> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <pid_pipe/ovr/dout_p3_0> of sequential type is unconnected in block <pid_controller>.
+WARNING:Xst:2677 - Node <pid_pipe/opt/dout_p5_48> of sequential type is unconnected in block <pid_controller>.
+INFO:Xst:2261 - The FF/Latch <adc_cntrl/chan_a_tx_0> in Unit <pid_controller> is equivalent to the following FF/Latch, which will be removed : <adc_cntrl/chan_b_tx_0> 
+INFO:Xst:2261 - The FF/Latch <adc_cntrl/chan_a_tx_1> in Unit <pid_controller> is equivalent to the following FF/Latch, which will be removed : <adc_cntrl/chan_b_tx_1> 
+INFO:Xst:3203 - The FF/Latch <adc_cntrl/chan_a_tx_2> in Unit <pid_controller> is the opposite to the following FF/Latch, which will be removed : <adc_cntrl/chan_b_tx_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pid_controller, actual ratio is 59.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <adc_buf> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <dac_buf> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <core0/a0/pc0/sync_interrupt_flop> in Unit <fp_intf/hostIf/core0> is equivalent to the following FF/Latch : <core0/a0/pc0/sync_sleep_flop> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <adc_buf> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <adc_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <dac_buf> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <dac_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <core0/a0/pc0/sync_interrupt_flop> in Unit <fp_intf/hostIf/core0> is equivalent to the following FF/Latch : <core0/a0/pc0/sync_sleep_flop> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fp_intf/log_pipe_buf/pipe_buf> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <pid_pipe/idp/input_buf> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+FlipFlop pid_pipe/opt/add_chan_p1_0 has been replicated 15 time(s)
+FlipFlop pid_pipe/opt/add_chan_p1_1 has been replicated 15 time(s)
+FlipFlop pid_pipe/opt/add_chan_p1_2 has been replicated 2 time(s)
+FlipFlop pid_pipe/opt/add_chan_p1_3 has been replicated 2 time(s)
+FlipFlop pid_pipe/opt/add_chan_p1_4 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 7352
+ Flip-Flops                                            : 7352
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : pid_controller.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 14330
+#      GND                         : 32
+#      INV                         : 81
+#      LUT1                        : 220
+#      LUT2                        : 1002
+#      LUT3                        : 1608
+#      LUT4                        : 551
+#      LUT5                        : 780
+#      LUT6                        : 7918
+#      LUT6_2                      : 50
+#      MUXCY                       : 868
+#      MUXF7                       : 474
+#      VCC                         : 4
+#      XORCY                       : 742
+# FlipFlops/Latches                : 8944
+#      FD                          : 4336
+#      FD_1                        : 272
+#      FDC                         : 292
+#      FDCE                        : 263
+#      FDE                         : 2265
+#      FDP                         : 82
+#      FDPE                        : 14
+#      FDR                         : 272
+#      FDRE                        : 1135
+#      FDS                         : 5
+#      FDSE                        : 2
+#      ODDR2                       : 6
+# RAMS                             : 75
+#      RAM128X1S                   : 8
+#      RAM32M                      : 23
+#      RAM32X1D                    : 26
+#      RAM32X1S                    : 3
+#      RAM64M                      : 2
+#      RAM64X1D                    : 2
+#      RAMB16BWER                  : 4
+#      RAMB8BWER                   : 7
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 74
+#      IBUF                        : 18
+#      IBUFG                       : 1
+#      IOBUF                       : 17
+#      OBUF                        : 36
+#      OBUFT                       : 2
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 13
+#      DSP48A1                     : 13
+# Others                           : 17
+#      DNA_PORT                    : 1
+#      IODELAY2                    : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            8896  out of  54576    16%  
+ Number of Slice LUTs:                12386  out of  27288    45%  
+    Number used as Logic:             12210  out of  27288    44%  
+    Number used as Memory:              176  out of   6408     2%  
+       Number used as RAM:              175
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:  15347
+   Number with an unused Flip Flop:    6451  out of  15347    42%  
+   Number with an unused LUT:          2961  out of  15347    19%  
+   Number of fully used LUT-FF pairs:  5935  out of  15347    38%  
+   Number of unique control sets:       185
+
+IO Utilization: 
+ Number of IOs:                          76
+ Number of bonded IOBs:                  76  out of    316    24%  
+    IOB Flip Flops/Latches:              48
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of    116     6%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of DSP48A1s:                     13  out of     58    22%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                | Load  |
+-----------------------------------+----------------------------------------------------------------------+-------+
+clk17_in                           | BUFGP                                                                | 151   |
+clk50_in                           | BUFGP                                                                | 7689  |
+hi_in<0>                           | DCM_SP:CLK0                                                          | 1201  |
+fp_intf/hostIf/core0/okCH<1>       | NONE(fp_intf/hostIf/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom)| 1     |
+-----------------------------------+----------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 24.255ns (Maximum Frequency: 41.229MHz)
+   Minimum input arrival time before clock: 7.073ns
+   Maximum output required time after clock: 6.727ns
+   Maximum combinational path delay: 1.328ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50_in'
+  Clock period: 24.255ns (frequency: 41.229MHz)
+  Total number of paths / destination ports: 621643030860 / 12073
+-------------------------------------------------------------------------
+Delay:               24.255ns (Levels of Logic = 80)
+  Source:            pid_pipe/opt/dout_prev_mem_19_931 (FF)
+  Destination:       pid_pipe/opt/dout_p5_47 (FF)
+  Source Clock:      clk50_in rising
+  Destination Clock: clk50_in rising
+
+  Data Path: pid_pipe/opt/dout_prev_mem_19_931 to pid_pipe/opt/dout_p5_47
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.525   1.221  pid_pipe/opt/dout_prev_mem_19_931 (pid_pipe/opt/dout_prev_mem_19_931)
+     LUT6:I0->O            1   0.254   0.958  pid_pipe/opt/Mmux_add_chan_p1[4]_X_30_o_wide_mux_274_OUT_8 (pid_pipe/opt/Mmux_add_chan_p1[4]_X_30_o_wide_mux_274_OUT_8)
+     LUT6:I2->O            1   0.254   0.000  pid_pipe/opt/Mmux_add_chan_p1[4]_X_30_o_wide_mux_274_OUT_4 (pid_pipe/opt/Mmux_add_chan_p1[4]_X_30_o_wide_mux_274_OUT_4)
+     MUXF7:I0->O           1   0.163   0.790  pid_pipe/opt/Mmux_add_chan_p1[4]_X_30_o_wide_mux_274_OUT_2_f7 (pid_pipe/opt/add_chan_p1[4]_X_30_o_wide_mux_274_OUT<0>)
+     LUT2:I0->O            1   0.250   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_lut<0> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<0> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<1> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<2> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<3> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<4> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<5> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<6> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<7> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<8> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<9> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<10> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<11> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<12> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<13> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<14> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<15> (pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_cy<15>)
+     XORCY:CI->O           1   0.206   0.681  pid_pipe/opt/Msub_add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT_xor<16> (pid_pipe/opt/add_chan_p1[4]_add_chan_p1[4]_sub_276_OUT<16>)
+     DSP48A1:A16->P47     18   5.220   1.234  pid_pipe/opt/Mmult_n1419_submult_0 (pid_pipe/opt/Mmult_n1419_submult_0_P47_to_Mmult_n1419_submult_01)
+     DSP48A1:C30->P33     15   3.141   1.155  pid_pipe/opt/Mmult_n1419_submult_01 (pid_pipe/opt/Mmult_n1419_submult_0_50)
+     LUT2:I1->O            1   0.254   0.000  pid_pipe/opt/Mmult_n14190_Madd_lut<50> (pid_pipe/opt/Mmult_n14190_Madd_lut<50>)
+     MUXCY:S->O            1   0.215   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<50> (pid_pipe/opt/Mmult_n14190_Madd_cy<50>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<51> (pid_pipe/opt/Mmult_n14190_Madd_cy<51>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<52> (pid_pipe/opt/Mmult_n14190_Madd_cy<52>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<53> (pid_pipe/opt/Mmult_n14190_Madd_cy<53>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<54> (pid_pipe/opt/Mmult_n14190_Madd_cy<54>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<55> (pid_pipe/opt/Mmult_n14190_Madd_cy<55>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<56> (pid_pipe/opt/Mmult_n14190_Madd_cy<56>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<57> (pid_pipe/opt/Mmult_n14190_Madd_cy<57>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<58> (pid_pipe/opt/Mmult_n14190_Madd_cy<58>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<59> (pid_pipe/opt/Mmult_n14190_Madd_cy<59>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<60> (pid_pipe/opt/Mmult_n14190_Madd_cy<60>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<61> (pid_pipe/opt/Mmult_n14190_Madd_cy<61>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Mmult_n14190_Madd_cy<62> (pid_pipe/opt/Mmult_n14190_Madd_cy<62>)
+     XORCY:CI->O          11   0.206   1.039  pid_pipe/opt/Mmult_n14190_Madd_xor<63> (pid_pipe/opt/n1419<63>)
+     LUT5:I4->O            1   0.254   0.910  pid_pipe/opt/Sh2081_SW0 (N627)
+     LUT6:I3->O            3   0.235   0.766  pid_pipe/opt/Sh2691 (pid_pipe/opt/Sh269)
+     LUT5:I4->O            1   0.254   0.682  pid_pipe/opt/Mmux__n35711811 (pid_pipe/opt/Mmux__n3571181)
+     LUT6:I5->O            1   0.254   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_lut<9> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_lut<9>)
+     MUXCY:S->O            1   0.215   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<9> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<10> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<11> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<12> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<13> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<14> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<15> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<16> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<17> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<18> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<19> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<20> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<21> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<22> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<23> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<24> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<25> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<26> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<27> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<28> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<29> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<29>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<30> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<30>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<31> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<31>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<32> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<32>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<33> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<33>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<34> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<34>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<35> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<35>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<36> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<36>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<37> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<37>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<38> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<38>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<39> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<39>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<40> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<40>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<41> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<41>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<42> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<42>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<43> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<43>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<44> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<44>)
+     MUXCY:CI->O           1   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<45> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<45>)
+     MUXCY:CI->O           0   0.023   0.000  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<46> (pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_cy<46>)
+     XORCY:CI->O           1   0.206   0.682  pid_pipe/opt/Msub_chan_in[4]_add_chan_p1[4]_sub_280_OUT_xor<47> (pid_pipe/opt/chan_in[4]_add_chan_p1[4]_sub_280_OUT<47>)
+     LUT6:I5->O            1   0.254   0.000  pid_pipe/opt/Mmux_dout_int_p5[48]_chan_in[4]_mux_280_OUT421 (pid_pipe/opt/dout_int_p5[48]_chan_in[4]_mux_280_OUT<47>)
+     FDE:D                     0.074          pid_pipe/opt/dout_p5_47
+    ----------------------------------------
+    Total                     24.255ns (14.137ns logic, 10.118ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hi_in<0>'
+  Clock period: 10.535ns (frequency: 94.920MHz)
+  Total number of paths / destination ports: 23716 / 2603
+-------------------------------------------------------------------------
+Delay:               10.535ns (Levels of Logic = 10)
+  Source:            fp_intf/hostIf/core0/core0/ti_addr_1 (FF)
+  Destination:       fp_intf/hostIf/delays[11].fdreout0 (FF)
+  Source Clock:      hi_in<0> rising
+  Destination Clock: hi_in<0> rising
+
+  Data Path: fp_intf/hostIf/core0/core0/ti_addr_1 to fp_intf/hostIf/delays[11].fdreout0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             35   0.525   2.000  core0/ti_addr_1 (ok1<17>)
+     end scope: 'fp_intf/hostIf/core0:ok1<17>'
+     begin scope: 'fp_intf/log_owo_arr[19].log_owo:ok1<17>'
+     LUT6:I1->O            1   0.254   1.137  ti_addr[7]_ep_addr[7]_equal_2_o81 (ti_addr[7]_ep_addr[7]_equal_2_o8)
+     LUT6:I0->O           16   0.254   1.290  ti_addr[7]_ep_addr[7]_equal_2_o83 (ti_addr[7]_ep_addr[7]_equal_2_o)
+     LUT2:I0->O            1   0.250   1.137  Mmux_ok2<15:0>161 (ok2<9>)
+     end scope: 'fp_intf/log_owo_arr[19].log_owo:ok2<9>'
+     LUT6:I0->O            1   0.254   0.958  fp_intf/wireOR/ok2<94>1 (fp_intf/wireOR/ok2<94>)
+     LUT4:I0->O            1   0.254   0.682  fp_intf/wireOR/ok2<94>3 (fp_intf/wireOR/ok2<94>2)
+     LUT5:I4->O            1   0.254   0.958  fp_intf/wireOR/ok2<94>5 (fp_intf/ok2<9>)
+     begin scope: 'fp_intf/hostIf/core0:ok2<9>'
+     LUT4:I0->O            1   0.254   0.000  core0/Mmux_hi_dataout711 (okCH<12>)
+     end scope: 'fp_intf/hostIf/core0:okCH<12>'
+     FDRE:D                    0.074          fp_intf/hostIf/delays[9].fdreout0
+    ----------------------------------------
+    Total                     10.535ns (2.373ns logic, 8.162ns route)
+                                       (22.5% logic, 77.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk17_in'
+  Clock period: 5.748ns (frequency: 173.974MHz)
+  Total number of paths / destination ports: 1225 / 260
+-------------------------------------------------------------------------
+Delay:               5.748ns (Levels of Logic = 3)
+  Source:            adc_cntrl/rd_counter_0 (FF)
+  Destination:       adc_cntrl/rd_counter_0 (FF)
+  Source Clock:      clk17_in rising
+  Destination Clock: clk17_in rising
+
+  Data Path: adc_cntrl/rd_counter_0 to adc_cntrl/rd_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             25   0.525   1.511  adc_cntrl/rd_counter_0 (adc_cntrl/rd_counter_0)
+     LUT3:I1->O            1   0.250   0.790  adc_cntrl/GND_22_o_GND_22_o_equal_9_o<7>_SW0 (N388)
+     LUT6:I4->O            3   0.250   0.766  adc_cntrl/GND_22_o_GND_22_o_equal_9_o<7> (adc_cntrl/GND_22_o_GND_22_o_equal_9_o)
+     LUT5:I4->O            8   0.254   0.943  adc_cntrl/Mcount_rd_counter_val1 (adc_cntrl/Mcount_rd_counter_val)
+     FDR:R                     0.459          adc_cntrl/rd_counter_0
+    ----------------------------------------
+    Total                      5.748ns (1.738ns logic, 4.010ns route)
+                                       (30.2% logic, 69.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fp_intf/hostIf/core0/okCH<1>'
+  Clock period: 3.081ns (frequency: 324.570MHz)
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Delay:               3.081ns (Levels of Logic = 0)
+  Source:            fp_intf/hostIf/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:       fp_intf/hostIf/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Source Clock:      fp_intf/hostIf/core0/okCH<1> rising
+  Destination Clock: fp_intf/hostIf/core0/okCH<1> rising
+
+  Data Path: fp_intf/hostIf/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to fp_intf/hostIf/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB15    1   2.100   0.681  core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (core0/a0/pm0/n0016<15>)
+     RAMB16BWER:DIB15          0.300          core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    ----------------------------------------
+    Total                      3.081ns (2.400ns logic, 0.681ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk17_in'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              5.005ns (Levels of Logic = 3)
+  Source:            adc_busy_in (PAD)
+  Destination:       adc_cntrl/cv_counter_0 (FF)
+  Destination Clock: clk17_in rising
+
+  Data Path: adc_busy_in to adc_cntrl/cv_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.328   0.876  adc_busy_in_IBUF (adc_busy_in_IBUF)
+     LUT4:I3->O            1   0.254   0.910  adc_cntrl/Mcount_cv_counter_val22 (adc_cntrl/Mcount_cv_counter_val_bdd0)
+     LUT4:I1->O            8   0.235   0.943  adc_cntrl/Mcount_cv_counter_val11 (adc_cntrl/Mcount_cv_counter_val)
+     FDR:R                     0.459          adc_cntrl/cv_counter_0
+    ----------------------------------------
+    Total                      5.005ns (2.276ns logic, 2.729ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 1092 / 278
+-------------------------------------------------------------------------
+Offset:              7.073ns (Levels of Logic = 6)
+  Source:            hi_in<7> (PAD)
+  Destination:       fp_intf/hostIf/core0/core0/ti_dataout_15 (FF)
+  Destination Clock: hi_in<0> rising
+
+  Data Path: hi_in<7> to fp_intf/hostIf/core0/core0/ti_dataout_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.328   1.610  hi_in_7_IBUF (hi_in_7_IBUF)
+     begin scope: 'fp_intf/hostIf/core0:okHC<7>'
+     LUT4:I0->O            2   0.254   0.726  core0/hi_addr[3]_hi_addr[3]_OR_157_o1 (core0/hi_addr[3]_hi_addr[3]_OR_157_o)
+     LUT4:I3->O            1   0.254   0.682  core0/state[31]_ti_dataout[15]_select_93_OUT<0>13 (core0/state[31]_ti_dataout[15]_select_93_OUT<0>13)
+     LUT5:I4->O           16   0.254   1.637  core0/state[31]_ti_dataout[15]_select_93_OUT<0>14 (core0/state[31]_ti_dataout[15]_select_93_OUT<0>1)
+     LUT6:I0->O            1   0.254   0.000  core0/state[31]_ti_dataout[15]_select_93_OUT<3>1 (core0/state[31]_ti_dataout[15]_select_93_OUT<3>)
+     FDE:D                     0.074          core0/ti_dataout_3
+    ----------------------------------------
+    Total                      7.073ns (2.418ns logic, 4.655ns route)
+                                       (34.2% logic, 65.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50_in'
+  Total number of paths / destination ports: 32 / 22
+-------------------------------------------------------------------------
+Offset:              6.727ns (Levels of Logic = 2)
+  Source:            fp_intf/sys_gp_oti/ep_trigger_0 (FF)
+  Destination:       dds_reset_out<3> (PAD)
+  Source Clock:      clk50_in rising
+
+  Data Path: fp_intf/sys_gp_oti/ep_trigger_0 to dds_reset_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q           3460   0.525   3.290  ep_trigger_0 (ep_trigger<0>)
+     end scope: 'fp_intf/sys_gp_oti:ep_trigger<0>'
+     OBUF:I->O                 2.912          dds_reset_out_3_OBUF (dds_reset_out<3>)
+    ----------------------------------------
+    Total                      6.727ns (3.437ns logic, 3.290ns route)
+                                       (51.1% logic, 48.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 38 / 21
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 2)
+  Source:            fp_intf/hostIf/core0/core0/a0/c0/atmel_dout (FF)
+  Destination:       hi_aa (PAD)
+  Source Clock:      hi_in<0> rising
+
+  Data Path: fp_intf/hostIf/core0/core0/a0/c0/atmel_dout to hi_aa
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             2   0.525   0.725  core0/a0/c0/atmel_dout (okCH<19>)
+     end scope: 'fp_intf/hostIf/core0:okCH<19>'
+     IOBUF:I->IO               2.912          fp_intf/hostIf/tbuf (hi_aa)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk17_in'
+  Total number of paths / destination ports: 7 / 2
+-------------------------------------------------------------------------
+Offset:              5.956ns (Levels of Logic = 2)
+  Source:            adc_cntrl/rd_counter_7 (FF)
+  Destination:       adc_n_cs_out (PAD)
+  Source Clock:      clk17_in rising
+
+  Data Path: adc_cntrl/rd_counter_7 to adc_n_cs_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             27   0.525   1.544  adc_cntrl/rd_counter_7 (adc_cntrl/rd_counter_7)
+     LUT6:I4->O            2   0.250   0.725  adc_cntrl/_n017711 (adc_n_cs_out_OBUF)
+     OBUF:I->O                 2.912          adc_n_cs_out_OBUF (adc_n_cs_out)
+    ----------------------------------------
+    Total                      5.956ns (3.687ns logic, 2.269ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               1.328ns (Levels of Logic = 1)
+  Source:            hi_inout<15> (PAD)
+  Destination:       fp_intf/hostIf/delays[15].iodelay_inst:IDATAIN (PAD)
+
+  Data Path: hi_inout<15> to fp_intf/hostIf/delays[15].iodelay_inst:IDATAIN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           0   1.328   0.000  fp_intf/hostIf/delays[15].iobf0 (fp_intf/hostIf/iobf0_hi_datain<15>)
+    IODELAY2:IDATAIN           0.000          fp_intf/hostIf/delays[15].iodelay_inst
+    ----------------------------------------
+    Total                      1.328ns (1.328ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk17_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk17_in       |    5.748|         |         |         |
+clk50_in       |    5.748|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk50_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk17_in       |    1.280|         |         |         |
+clk50_in       |   24.255|    8.046|    8.968|         |
+hi_in<0>       |   11.662|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fp_intf/hostIf/core0/okCH<1>
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+fp_intf/hostIf/core0/okCH<1>|    3.081|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hi_in<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50_in       |    5.597|         |         |         |
+hi_in<0>       |   10.535|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 63.00 secs
+Total CPU time to Xst completion: 61.99 secs
+ 
+--> 
+
+
+Total memory usage is 554948 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  117 (   0 filtered)
+Number of infos    :  109 (   0 filtered)
+

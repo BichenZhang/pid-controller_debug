@@ -1,0 +1,16 @@
+# Output products list for <adc_fifo>
+_xmsgs/pn_parser.xmsgs
+adc_fifo/doc/fifo_generator_v9_3_readme.txt
+adc_fifo/doc/fifo_generator_v9_3_vinfo.html
+adc_fifo/doc/pg057-fifo-generator.pdf
+adc_fifo/fifo_generator_v9_3_readme.txt
+adc_fifo.asy
+adc_fifo.gise
+adc_fifo.ngc
+adc_fifo.sym
+adc_fifo.v
+adc_fifo.veo
+adc_fifo.xco
+adc_fifo.xise
+adc_fifo_flist.txt
+adc_fifo_xmdf.tcl

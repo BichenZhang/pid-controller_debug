@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\mist-lab\Documents\Control Software\PID_Control\PID_Controller\pid_controller.ncd
+OUTFILE=C:\Users\mist-lab\Documents\Control Software\PID_Control\PID_Controller\pid_controller.bit
+FAMILY=Spartan6
+PART=xc6slx45-2fgg484
+WORKINGDIR=C:\Users\mist-lab\Documents\Control Software\PID_Control\PID_Controller
+LICENSE=WebPack
+USER_INFO=210892602_0_0_346
