@@ -289,7 +289,7 @@ reg [N_DDS-1:0] enable_dv = 0;
 //start with just digital for now
 integer k;
 always @( posedge dds_clk ) begin
-    for ( k = 0; i < N_DDS; k = k + 1 ) begin
+    for ( k = 0; k < N_DDS; k = k + 1 ) begin
 		  if (sys_rst) begin
 				sine_enable[k] = 1;
 				digital_enable[k] = 1;
