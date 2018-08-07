@@ -13,6 +13,8 @@
 // word is fetched from the fifo.
 //--------------------------------------------------------------------
 
+// dispatch chanel select instructions from frontpanel interface
+
 module instr_dispatch #(
     parameter N_SRC = 8,
     parameter W_SRC = 5,
@@ -30,7 +32,8 @@ module instr_dispatch #(
     input wire dv_in,
     input wire [W_SRC-1:0] src_in,
     input wire [W_DATA-1:0] data_in,
-
+	 
+	 // inputs from frontpanel
     input wire wr_en,
     input wire [W_WR_ADDR-1:0] wr_addr,
     input wire [W_WR_CHAN-1:0] wr_chan,

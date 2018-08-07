@@ -8,17 +8,17 @@
 
 module pid_pipeline #(
     parameter N_SRC = 8,        // Number of source channels
-    parameter W_SRC = 5,        // Width of source select signal
-    parameter N_CHAN = 5,       // Number of output channels
+    parameter W_SRC = 3,        // Width of source select signal
+    parameter N_CHAN = 20,       // Number of output channels
     parameter W_CHAN = 5,       // Width of output select signal
     parameter W_DIN = 18,       // Width of source input data
-    parameter W_DOUT = 64,      // Width of output data
-    parameter W_OS = 7,         // Width of oversample mode signal
-    parameter W_COMP = 128,     // Width of internal computation registers
+    parameter W_DOUT = 49,      // Width of output data
+    parameter W_OS = 5,         // Width of oversample mode signal
+    parameter W_COMP = 27,     // Width of internal computation registers
     parameter W_OPRNDS = 16,    // Width of operands
     parameter W_WR_ADDR = 16,   // Width of memory write address
-    parameter W_WR_CHAN = 16,   // Width of memory write channel
-    parameter W_WR_DATA = 48    // Width of memory write data
+    parameter W_WR_CHAN = 5,   // Width of memory write channel
+    parameter W_WR_DATA = 49    // Width of memory write data
     )(
     // Inputs
     input wire clk_in,

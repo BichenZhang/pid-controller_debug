@@ -7,15 +7,17 @@
 // number of samples.
 //--------------------------------------------------------------------
 
+// it seems like 123 456 789 
+
 module oversample_filter #(
     parameter W_CHAN = 5,
-    parameter N_CHAN = 8,
+    parameter N_CHAN = 20,
     parameter W_DATA = 18,
-    parameter W_SUM = 128,
+    parameter W_SUM = 27,
     parameter W_OS = 5,
     parameter W_WR_ADDR = 16,
-    parameter W_WR_CHAN = 16,
-    parameter W_WR_DATA = 48
+    parameter W_WR_CHAN = 5,
+    parameter W_WR_DATA = 49
     )(
     // Inputs
     input wire clk_in,
@@ -46,8 +48,8 @@ module oversample_filter #(
 localparam W_COUNT = 2**W_OS;
 localparam W_SUM_INT = ((W_SUM > W_DATA) ? W_SUM : W_DATA) + 1;
 
-localparam signed [W_SUM-1:0] MAX_SUM = {W_SUM{1'b1}} >> 1;
-localparam signed [W_SUM-1:0] MIN_SUM = ~MAX_SUM;
+localparam signed [W_SUM-1:0] MAX_SUM = {W_SUM{1'b1}} >> 1;    //01111...111
+localparam signed [W_SUM-1:0] MIN_SUM = ~MAX_SUM;					//10000...000
 
 //--------------------------------------------------------------------
 // Request Registers

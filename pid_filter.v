@@ -8,14 +8,14 @@
 
 module pid_filter #(
     parameter W_CHAN = 5,
-    parameter N_CHAN = 8,
-    parameter W_DIN = 48,
-    parameter W_DOUT = 128,
+    parameter N_CHAN = 20,
+    parameter W_DIN = 27,
+    parameter W_DOUT = 27,
     parameter W_PID_COEFS = 16,
 	 parameter W_OS = 5,
     parameter W_WR_ADDR = 16,
-    parameter W_WR_CHAN = 16,
-    parameter W_WR_DATA = 48 
+    parameter W_WR_CHAN = 5,
+    parameter W_WR_DATA = 49 
     )(
     // Inputs
     input wire clk_in,
